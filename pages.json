@@ -3,7 +3,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "首页"
 			}
 		}, {
 			"path": "pages/moment/moment",
@@ -46,6 +46,12 @@
 			{
 				"pagePath": "pages/business/business",
 				"text": "企脉",
+				"iconPath": "static/tab/icon_man.png",
+				"selectedIconPath": "static/tab/icon_man.png"
+			},
+			{
+				"pagePath": "pages/learning/learning",
+				"text": "学习",
 				"iconPath": "static/tab/icon_man.png",
 				"selectedIconPath": "static/tab/icon_man.png"
 			},

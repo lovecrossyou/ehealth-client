@@ -12,9 +12,8 @@
 				2019-5-12
 			</view>
 			<view class="down-wrapper">
-				<view class="count">
-					下载
-				</view>
+				<image  src="../../static/icon_unload.png" class="download-icon">
+				</image>
 				<view class="count">
 					2.34万
 				</view>
@@ -35,6 +34,11 @@
 		flex-direction: column;
 		align-items: center;
 		margin-right: 23upx;
+	}
+	.download-icon{
+		width: 20upx;
+		height: 20upx;
+		margin-right: 3upx;
 	}
 
 	.logo {
@@ -72,6 +76,7 @@
 	.down-wrapper{
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 	}
 
 	.count {
@@ -80,5 +85,6 @@
 		font-weight: 400;
 		color: rgba(153, 153, 153, 1);
 		line-height: 44upx;
+		margin-left: 3upx;
 	}
 </style>

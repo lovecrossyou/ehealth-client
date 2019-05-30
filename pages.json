@@ -34,32 +34,32 @@
 		"list": [{
 				"pagePath": "pages/index/index",
 				"text": "首页",
-				"iconPath": "static/tab/icon_man.png",
-				"selectedIconPath": "static/tab/icon_man.png"
+				"iconPath": "static/tab/tab_home.png",
+				"selectedIconPath": "static/tab/tab_home.png"
 			},
 			{
 				"pagePath": "pages/moment/moment",
 				"text": "动态",
-				"iconPath": "static/tab/icon_man.png",
-				"selectedIconPath": "static/tab/icon_man.png"
+				"iconPath": "static/tab/tab_dynamic.png",
+				"selectedIconPath": "static/tab/tab_dynamic.png"
 			},
 			{
 				"pagePath": "pages/business/business",
 				"text": "企脉",
-				"iconPath": "static/tab/icon_man.png",
-				"selectedIconPath": "static/tab/icon_man.png"
+				"iconPath": "static/tab/tab_connections.png",
+				"selectedIconPath": "static/tab/tab_connections.png"
 			},
 			{
 				"pagePath": "pages/learning/learning",
 				"text": "学习",
-				"iconPath": "static/tab/icon_man.png",
-				"selectedIconPath": "static/tab/icon_man.png"
+				"iconPath": "static/tab/tab_study.png",
+				"selectedIconPath": "static/tab/tab_study.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
 				"text": "我的",
-				"iconPath": "static/tab/icon_man.png",
-				"selectedIconPath": "static/tab/icon_man.png"
+				"iconPath": "static/tab/tab_me.png",
+				"selectedIconPath": "static/tab/tab_me.png"
 			}
 		]
 	},

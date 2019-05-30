@@ -47,7 +47,6 @@
 						乌丹星：分享了中国养老产业发展的 市场与战略思考。
 					</view>
 					<image src="http://qnimage.xiteng.com/1.png" class="news-item-logo">
-
 					</image>
 					<view class="news-item-time">
 						今天12:10
@@ -85,16 +84,22 @@
 		<!-- 研究报告 -->
 		<view class="report-items-wrapper">
 			<naviTitle title="研究报告"></naviTitle>
-			<view class="report-items">
-				<reportItem></reportItem>
-				<reportItem></reportItem>
-				<reportItem></reportItem>
-			</view>
+			<scroll-view scroll-x="true" class="report-items scroll-view_H" style="width: 100%">
+				<div>
+					<reportItem></reportItem>
+				</div>
+				<div>
+					<reportItem></reportItem>
+				</div>
+				<div>
+					<reportItem></reportItem>
+				</div>
+			</scroll-view>
 		</view>
 		<!-- 产业问答 -->
 		<view class="star-companys">
 			<naviTitle title="产业问答"></naviTitle>
-			
+
 		</view>
 	</view>
 </template>
@@ -198,11 +203,16 @@
 		margin-top: 20upx;
 		padding: 20upx 27upx;
 		box-sizing: border-box;
+		/* height: 190upx; */
+
+
 	}
 
 	.report-items {
 		display: flex;
 		flex-direction: row;
+		height: 120upx;
+		/* width: 100%; */
 
 	}
 

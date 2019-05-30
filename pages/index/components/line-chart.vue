@@ -134,12 +134,12 @@
 </script>
 
 <style>
-	page {
+	/* page {
 		background: #F2F2F2;
 		width: 100%;
 		overflow-x: hidden;
 	}
-
+ */
 	.qiun-padding {
 		padding: 2%;
 		width: 96%;

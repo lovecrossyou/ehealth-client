@@ -5,7 +5,7 @@
 			<swiper class="swiper-tall" :indicator-dots="indicatorDots" :autoplay="autoplay" :previous-margin="previousMargin"
 			 :next-margin="nextMargin" :circular="circular" @change="change" :current="swiperCurrentIndex">
 				<swiper-item class="swiper-container" v-for="(img,index) in imgs" :key="index" :item-id="img" :data-year="index">
-					<view class="swiper-item" :animation="animationData[index]">
+					<view class="swiper-item">
 						<view class="xingfu">
 						</view>
 						<view class="yueka">
@@ -19,22 +19,25 @@
 			</swiper>
 		</view>
 
-
 		<!-- 行业指数发布 -->
 		<view class="industry-index">
 			<naviTitle title="行业指数发布"></naviTitle>
-			<!-- <lineChart></lineChart> -->
+			<view class="qiun-charts">
+				<canvas canvas-id="canvasLineA" id="canvasLineA" class="charts" @touchstart="touchLineA"></canvas>
+			</view>
 		</view>
 
 		<!-- 康养十大明星企业 -->
 		<view class="star-companys">
 			<naviTitle title="康养十大明星企业"></naviTitle>
-			<view class="companys">
-				<starCompanyItem></starCompanyItem>
-				<starCompanyItem></starCompanyItem>
-				<starCompanyItem></starCompanyItem>
-				<starCompanyItem></starCompanyItem>
-			</view>
+			<scroll-view scroll-x="true" class="scroll-view_H" style="width: 100%" scroll-with-animation>
+				<view class="companys">
+					<starCompanyItem></starCompanyItem>
+					<starCompanyItem></starCompanyItem>
+					<starCompanyItem></starCompanyItem>
+					<starCompanyItem></starCompanyItem>
+				</view>
+			</scroll-view>
 		</view>
 
 		<!-- 产业新闻 -->
@@ -136,21 +139,30 @@
 </template>
 <script>
 	import naviTitle from "@/components/navi-title.vue";
-	import lineChart from './components/line-chart.vue';
+	// import lineChart from '@/components/u-charts/pages/ucharts-demo/pie/pie.vue';
+	
 	import starCompanyItem from "./components/star-company-item.vue"
 	import reportItem from "./components/report-item.vue"
 
 	import Tabs from '@/components/tabs/tabs.vue'
 	import TabPane from '@/components/tabs/tabPane.vue'
+	
+	import uCharts from '@/components/u-charts/u-charts.js';
+	var _self;
+	var canvaLineA=null;
 	export default {
 		components: {
 			naviTitle,
-			lineChart,
+			// lineChart,
 			starCompanyItem,
 			reportItem
 		},
 		data() {
 			return {
+				cWidth:'',
+				cHeight:'',
+				pixelRatio:1,
+				serverData:'',
 				screenHeight: 0,
 				animationData: {
 					0: {},
@@ -178,21 +190,79 @@
 
 		},
 		onLoad() {
-			this.animation = uni.createAnimation();
-			this.animation.scale(this.zoomParam).step();
-			this.animationData[0] = this.animation.export();
+			_self = this;
+			this.cWidth=uni.upx2px(750);
+			this.cHeight=uni.upx2px(500);
+			this.getServerData();
 		},
 		methods: {
+			getServerData(){
+				uni.request({
+					url: 'https://www.easy-mock.com/mock/5cc586b64fc5576cba3d647b/uni-wx-charts/chartsdata2',
+					data:{
+					},
+					success: function(res) {
+						console.log(res.data.data)
+						//下面这个根据需要保存后台数据，我是为了模拟更新柱状图，所以存下来了
+						_self.serverData=res.data.data;
+						let LineA={categories:[],series:[]};
+						//这里我后台返回的是数组，所以用等于，如果您后台返回的是单条数据，需要push进去
+						LineA.categories=res.data.data.LineA.categories;
+						LineA.series=res.data.data.LineA.series;
+						_self.showLineA("canvasLineA",LineA);
+					},
+					fail: () => {
+						_self.tips="网络错误，小程序端请检查合法域名";
+					},
+				});
+			},
+			showLineA(canvasId,chartData){
+				canvaLineA=new uCharts({
+					$this:_self,
+					canvasId: canvasId,
+					type: 'line',
+					fontSize:11,
+					legend:false,
+					dataLabel:false,
+					dataPointShape:true,
+					background:'#FFFFFF',
+					pixelRatio:_self.pixelRatio,
+					categories: chartData.categories,
+					series: chartData.series,
+					animation: true,
+					xAxis: {
+						type:'grid',
+						gridColor:'#CCCCCC',
+						gridType:'dash',
+						dashLength:8
+					},
+					yAxis: {
+						gridType:'dash',
+						gridColor:'#CCCCCC',
+						dashLength:8,
+						splitNumber:5,
+						min:10,
+						max:180,
+						format:(val)=>{return val.toFixed(0)+'元'}
+					},
+					width: _self.cWidth*_self.pixelRatio,
+					height: _self.cHeight*_self.pixelRatio,
+					extra: {
+						lineStyle: 'straight'
+					}
+				});
+				
+			},
 			change(e) {
 				this.swiperCurrentIndex = e.detail.current;
 				this.title = e.detail.currentItemId;
 				for (let key in this.animationData) {
 					if (e.detail.currentItemId == key) {
-						this.animation.scale(this.zoomParam).step();
-						this.animationData[key] = this.animation.export();
+						// this.animation.scale(this.zoomParam).step();
+						// this.animationData[key] = this.animation.export();
 					} else {
-						this.animation.scale(1.0).step();
-						this.animationData[key] = this.animation.export();
+						// this.animation.scale(1.0).step();
+						// this.animationData[key] = this.animation.export();
 					}
 				}
 			}
@@ -202,7 +272,7 @@
 
 <style>
 	page {
-		height: 100%;
+		/* height: 100%; */
 		background: #f1f1f1;
 		width: 100%;
 		overflow: hidden;
@@ -305,7 +375,7 @@
 		margin-top: 20upx;
 		padding: 20upx 27upx;
 		box-sizing: border-box;
-		height: 480upx;
+		/* height: 480upx; */
 	}
 
 	.industry-news {
@@ -323,8 +393,8 @@
 		height: 380upx;
 		overflow: hidden;
 	}
-	
-	.ask-wrapper{
+
+	.ask-wrapper {
 		background-color: #FFFFFF;
 		margin-top: 20upx;
 		padding: 20upx 27upx;

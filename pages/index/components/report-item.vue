@@ -12,7 +12,7 @@
 				2019-5-12
 			</view>
 			<view class="down-wrapper">
-				<image  src="../../static/icon_unload.png" class="download-icon">
+				<image  src="/static/icon_unload.png" class="download-icon">
 				</image>
 				<view class="count">
 					2.34万

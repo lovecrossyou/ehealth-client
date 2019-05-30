@@ -84,16 +84,14 @@
 		<!-- 研究报告 -->
 		<view class="report-items-wrapper">
 			<naviTitle title="研究报告"></naviTitle>
-			<scroll-view scroll-x="true" class="report-items scroll-view_H" style="width: 100%">
-				<div>
+
+			<scroll-view scroll-x="true" class="scroll-view_H" style="width: 100%" scroll-with-animation>
+				<view class="report-items">
 					<reportItem></reportItem>
-				</div>
-				<div>
 					<reportItem></reportItem>
-				</div>
-				<div>
 					<reportItem></reportItem>
-				</div>
+				</view>
+
 			</scroll-view>
 		</view>
 		<!-- 产业问答 -->
@@ -204,16 +202,38 @@
 		padding: 20upx 27upx;
 		box-sizing: border-box;
 		/* height: 190upx; */
+	}
 
+	.scroll-view_H {
+		width: 750upx;
+		/* height: 240upx; */
 
+		overflow: scroll;
+	}
+
+	.scroll-view-item_H {
+		width: 680upx;
+		height: 190upx;
+	}
+
+	.bc_green {
+		background-color: #0EA391;
+	}
+
+	.bc_red {
+		background-color: #DC7004;
 	}
 
 	.report-items {
 		display: flex;
 		flex-direction: row;
-		height: 120upx;
+		/* height: 120upx; */
 		/* width: 100%; */
+	}
 
+	.report-item {
+		width: 282upx;
+		height: 190upx;
 	}
 
 	.news {}

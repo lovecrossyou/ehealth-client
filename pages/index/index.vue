@@ -32,10 +32,10 @@
 			<naviTitle title="康养十大明星企业"></naviTitle>
 			<scroll-view scroll-x="true" class="scroll-view_H" style="width: 100%" scroll-with-animation>
 				<view class="companys">
-					<starCompanyItem></starCompanyItem>
-					<starCompanyItem></starCompanyItem>
-					<starCompanyItem></starCompanyItem>
-					<starCompanyItem></starCompanyItem>
+					<starCompanyItem src="http://qnimage.xiteng.com/11@2x.png" title="泰康集团"></starCompanyItem>
+					<starCompanyItem src="http://qnimage.xiteng.com/12@2x.png" title="康恩贝集团"></starCompanyItem>
+					<starCompanyItem src="http://qnimage.xiteng.com/13@2x.png" title="天师集团"></starCompanyItem>
+					<starCompanyItem src="http://qnimage.xiteng.com/14@2x.png" title="康养中心"></starCompanyItem>
 				</view>
 			</scroll-view>
 		</view>
@@ -59,7 +59,7 @@
 					<view class="news-item-title">
 						乌丹星：分享了中国养老产业发展的 市场与战略思考。
 					</view>
-					<image src="http://qnimage.xiteng.com/1.png" class="news-item-logo">
+					<image src="http://qnimage.xiteng.com/2.png" class="news-item-logo">
 
 					</image>
 					<view class="news-item-time">
@@ -71,7 +71,7 @@
 					<view class="news-item-title">
 						乌丹星：分享了中国养老产业发展的 市场与战略思考。
 					</view>
-					<image src="http://qnimage.xiteng.com/1.png" class="news-item-logo">
+					<image src="http://qnimage.xiteng.com/3.png" class="news-item-logo">
 
 					</image>
 					<view class="news-item-time">
@@ -150,6 +150,24 @@
 	import uCharts from '@/components/u-charts/u-charts.js';
 	var _self;
 	var canvaLineA=null;
+	
+	/*下面是服务器返回的数据格式*/
+	var Data={
+			"LineA": {
+			  "categories": ["2012", "2013", "2014", "2015", "2016", "2017"],
+			  "series": [{
+				"name": "成交量A",
+				"data": [35, 8, 25, 37, 4, 20]
+			  }, {
+				"name": "成交量B",
+				"data": [70, 40, 65, 100, 44, 68]
+			  }, {
+				"name": "成交量C",
+				"data": [100, 80, 95, 150, 112, 132]
+			  }]
+			}
+		}
+	
 	export default {
 		components: {
 			naviTitle,
@@ -197,24 +215,12 @@
 		},
 		methods: {
 			getServerData(){
-				uni.request({
-					url: 'https://www.easy-mock.com/mock/5cc586b64fc5576cba3d647b/uni-wx-charts/chartsdata2',
-					data:{
-					},
-					success: function(res) {
-						console.log(res.data.data)
-						//下面这个根据需要保存后台数据，我是为了模拟更新柱状图，所以存下来了
-						_self.serverData=res.data.data;
-						let LineA={categories:[],series:[]};
-						//这里我后台返回的是数组，所以用等于，如果您后台返回的是单条数据，需要push进去
-						LineA.categories=res.data.data.LineA.categories;
-						LineA.series=res.data.data.LineA.series;
-						_self.showLineA("canvasLineA",LineA);
-					},
-					fail: () => {
-						_self.tips="网络错误，小程序端请检查合法域名";
-					},
-				});
+				_self.serverData=Data;
+				let LineA={categories:[],series:[]};
+				//这里我后台返回的是数组，所以用等于，如果您后台返回的是单条数据，需要push进去
+				LineA.categories=Data.LineA.categories;
+				LineA.series=Data.LineA.series;
+				_self.showLineA("canvasLineA",LineA);
 			},
 			showLineA(canvasId,chartData){
 				canvaLineA=new uCharts({
@@ -735,15 +741,17 @@
 
 	/* 通用样式 */
 	.qiun-charts {
-		width: 750upx;
+		width: 100%;
 		height: 500upx;
 		background-color: #FFFFFF;
+		overflow: hidden;
 	}
 
 	.charts {
-		width: 750upx;
+		width: 100%;
 		height: 500upx;
 		background-color: #FFFFFF;
+		overflow: hidden;
 	}
 
 	/* 横屏样式 */

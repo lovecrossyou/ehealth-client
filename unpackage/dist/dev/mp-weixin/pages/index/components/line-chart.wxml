@@ -1,1 +1,0 @@
-<view class="qiun-columns" bind:__l="__l"><view class="qiun-charts"><canvas class="charts" canvas-id="canvasMix" id="canvasMix" disable-scroll="true" data-event-opts="{{[['touchstart',[['touchMix',['$event']]]],['touchmove',[['moveMix',['$event']]]],['touchend',[['touchEndMix',['$event']]]]]}}" bindtouchstart="__e" bindtouchmove="__e" bindtouchend="__e"></canvas></view></view>

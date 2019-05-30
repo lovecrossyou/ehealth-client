@@ -98,6 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -109,8 +110,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-
+var _default =
+{
+  props: {
+    src: String,
+    title: String } };exports.default = _default;
 
 /***/ }),
 

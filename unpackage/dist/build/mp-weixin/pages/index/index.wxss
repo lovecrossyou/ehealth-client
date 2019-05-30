@@ -662,16 +662,14 @@ page {
 
 /* 通用样式 */
 .qiun-charts {
-	width: 100%;
+	width: 750rpx;
 	height: 500rpx;
 	background-color: #FFFFFF;
-	overflow: hidden;
 }
 .charts {
-	width: 100%;
+	width: 750rpx;
 	height: 500rpx;
 	background-color: #FFFFFF;
-	overflow: hidden;
 }
 
 /* 横屏样式 */

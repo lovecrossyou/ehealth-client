@@ -1,16 +1,22 @@
 <template>
 	<view class="item-wrapper">
-		<view class="logo">
+		<image :src="src" class="logo">
 
-		</view>
+		</image>
 
 		<view class="title">
-			太康集团
+			{{title}}
 		</view>
 	</view>
 </template>
 
 <script>
+	export default {
+		props: {
+			src: String,
+			title: String
+		}
+	}
 </script>
 
 <style>

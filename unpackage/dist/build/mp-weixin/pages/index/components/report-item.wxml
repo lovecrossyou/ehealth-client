@@ -1,0 +1,1 @@
+<view class="item-wrapper" bind:__l="__l"><view class="logo"></view><view class="title">2019年康养行业发展研 究报告...</view><view class="footer"><view class="time">2019-5-12</view><view class="down-wrapper"><image class="download-icon" src="/static/icon_unload.png"></image><view class="count">2.34万</view></view></view></view>

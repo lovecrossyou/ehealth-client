@@ -544,17 +544,45 @@ var _default2 =
 
 
 
+
+
 var _tabs = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/tabs.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/tabs/tabs.vue"));
-var _tabPane = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/tabPane.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/tabs/tabPane.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var naviTitle = function naviTitle() {return __webpack_require__.e(/*! import() | components/navi-title */ "components/navi-title").then(__webpack_require__.bind(null, /*! @/components/navi-title.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/navi-title.vue"));};var lineChart = function lineChart() {return Promise.all(/*! import() | pages/index/components/line-chart */[__webpack_require__.e("common/vendor"), __webpack_require__.e("pages/index/components/line-chart")]).then(__webpack_require__.bind(null, /*! ./components/line-chart.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/pages/index/components/line-chart.vue"));};var starCompanyItem = function starCompanyItem() {return __webpack_require__.e(/*! import() | pages/index/components/star-company-item */ "pages/index/components/star-company-item").then(__webpack_require__.bind(null, /*! ./components/star-company-item.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/pages/index/components/star-company-item.vue"));};var reportItem = function reportItem() {return __webpack_require__.e(/*! import() | pages/index/components/report-item */ "pages/index/components/report-item").then(__webpack_require__.bind(null, /*! ./components/report-item.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/pages/index/components/report-item.vue"));};var _default =
+var _tabPane = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/tabPane.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/tabs/tabPane.vue"));
+
+var _uCharts = _interopRequireDefault(__webpack_require__(/*! @/components/u-charts/u-charts.js */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/u-charts/u-charts.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var naviTitle = function naviTitle() {return __webpack_require__.e(/*! import() | components/navi-title */ "components/navi-title").then(__webpack_require__.bind(null, /*! @/components/navi-title.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/navi-title.vue"));};var starCompanyItem = function starCompanyItem() {return __webpack_require__.e(/*! import() | pages/index/components/star-company-item */ "pages/index/components/star-company-item").then(__webpack_require__.bind(null, /*! ./components/star-company-item.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/pages/index/components/star-company-item.vue"));};var reportItem = function reportItem() {return __webpack_require__.e(/*! import() | pages/index/components/report-item */ "pages/index/components/report-item").then(__webpack_require__.bind(null, /*! ./components/report-item.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/pages/index/components/report-item.vue"));};
+var _self;
+var canvaLineA = null;
+
+/*下面是服务器返回的数据格式*/
+var Data = {
+  "LineA": {
+    "categories": ["2012", "2013", "2014", "2015", "2016", "2017"],
+    "series": [{
+      "name": "成交量A",
+      "data": [35, 8, 25, 37, 4, 20] },
+    {
+      "name": "成交量B",
+      "data": [70, 40, 65, 100, 44, 68] },
+    {
+      "name": "成交量C",
+      "data": [100, 80, 95, 150, 112, 132] }] } };var _default =
+
+
+
+
 {
   components: {
     naviTitle: naviTitle,
-    lineChart: lineChart,
+    // lineChart,
     starCompanyItem: starCompanyItem,
     reportItem: reportItem },
 
   data: function data() {
     return {
+      cWidth: '',
+      cHeight: '',
+      pixelRatio: 1,
+      serverData: '',
       screenHeight: 0,
       animationData: {
         0: {},
@@ -582,22 +610,68 @@ var _tabPane = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/
 
 
   onLoad: function onLoad() {
-    this.animation = uni.createAnimation();
-    this.animation.scale(this.zoomParam).step();
-    this.animationData[0] = this.animation.export();
+    _self = this;
+    this.cWidth = uni.upx2px(750);
+    this.cHeight = uni.upx2px(500);
+    this.getServerData();
   },
   methods: {
+    getServerData: function getServerData() {
+      _self.serverData = Data;
+      var LineA = { categories: [], series: [] };
+      //这里我后台返回的是数组，所以用等于，如果您后台返回的是单条数据，需要push进去
+      LineA.categories = Data.LineA.categories;
+      LineA.series = Data.LineA.series;
+      _self.showLineA("canvasLineA", LineA);
+    },
+    showLineA: function showLineA(canvasId, chartData) {
+      canvaLineA = new _uCharts.default({
+        $this: _self,
+        canvasId: canvasId,
+        type: 'line',
+        fontSize: 11,
+        legend: false,
+        dataLabel: false,
+        dataPointShape: true,
+        background: '#FFFFFF',
+        pixelRatio: _self.pixelRatio,
+        categories: chartData.categories,
+        series: chartData.series,
+        animation: true,
+        xAxis: {
+          type: 'grid',
+          gridColor: '#CCCCCC',
+          gridType: 'dash',
+          dashLength: 8 },
+
+        yAxis: {
+          gridType: 'dash',
+          gridColor: '#CCCCCC',
+          dashLength: 8,
+          splitNumber: 5,
+          min: 10,
+          max: 180,
+          format: function format(val) {return val.toFixed(0) + '元';} },
+
+        width: _self.cWidth * _self.pixelRatio,
+        height: _self.cHeight * _self.pixelRatio,
+        extra: {
+          lineStyle: 'straight' } });
+
+
+
+    },
     change: function change(e) {
       this.swiperCurrentIndex = e.detail.current;
       this.title = e.detail.currentItemId;
       for (var key in this.animationData) {
         if (e.detail.currentItemId == key) {
-          this.animation.scale(this.zoomParam).step();
-          this.animationData[key] = this.animation.export();
+          // this.animation.scale(this.zoomParam).step();
+          // this.animationData[key] = this.animation.export();
         } else {
-          this.animation.scale(1.0).step();
-          this.animationData[key] = this.animation.export();
-        }
+            // this.animation.scale(1.0).step();
+            // this.animationData[key] = this.animation.export();
+          }
       }
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))

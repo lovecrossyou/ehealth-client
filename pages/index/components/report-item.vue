@@ -1,8 +1,8 @@
 <template>
 	<view class="item-wrapper">
-		<view class="logo">
+		<image src="http://qnimage.xiteng.com/4@2x.png" class="logo">
 
-		</view>
+		</image>
 
 		<view class="title">
 			2019年康养行业发展研 究报告...

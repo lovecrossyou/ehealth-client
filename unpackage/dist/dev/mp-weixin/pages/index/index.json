@@ -1,4 +1,9 @@
 {
-  "navigationBarTitleText": "uni-app",
-  "usingComponents": {}
+  "navigationBarTitleText": "首页",
+  "usingComponents": {
+    "navi-title": "/components/navi-title",
+    "line-chart": "/pages/index/components/line-chart",
+    "star-company-item": "/pages/index/components/star-company-item",
+    "report-item": "/pages/index/components/report-item"
+  }
 }

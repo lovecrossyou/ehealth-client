@@ -28,8 +28,8 @@
 		}
 	],
 	"tabBar": {
-		"color": "#7a7e83",
-		"selectedColor": "#3e87eb",
+		"color": "#000000",
+		"selectedColor": "#282828",
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/index/index",
@@ -65,7 +65,7 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "易康养",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	}

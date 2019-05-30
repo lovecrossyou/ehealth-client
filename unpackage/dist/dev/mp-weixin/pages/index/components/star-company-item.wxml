@@ -1,0 +1,1 @@
+<view class="item-wrapper" bind:__l="__l"><view class="logo"></view><view class="title">太康集团</view></view>

@@ -204,6 +204,8 @@
 	page {
 		height: 100%;
 		background: #f1f1f1;
+		width: 100%;
+		overflow: hidden;
 	}
 
 	.ask-tabs {
@@ -319,6 +321,7 @@
 		padding: 20upx 27upx;
 		box-sizing: border-box;
 		height: 380upx;
+		overflow: hidden;
 	}
 	
 	.ask-wrapper{

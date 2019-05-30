@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/moment/moment",
+    "pages/business/business",
+    "pages/learning/learning",
+    "pages/mine/mine"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "uni-app",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7a7e83",
+    "selectedColor": "#3e87eb",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tab/icon_man.png",
+        "selectedIconPath": "static/tab/icon_man.png"
+      },
+      {
+        "pagePath": "pages/moment/moment",
+        "text": "动态",
+        "iconPath": "static/tab/icon_man.png",
+        "selectedIconPath": "static/tab/icon_man.png"
+      },
+      {
+        "pagePath": "pages/business/business",
+        "text": "企脉",
+        "iconPath": "static/tab/icon_man.png",
+        "selectedIconPath": "static/tab/icon_man.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tab/icon_man.png",
+        "selectedIconPath": "static/tab/icon_man.png"
+      }
+    ]
+  },
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

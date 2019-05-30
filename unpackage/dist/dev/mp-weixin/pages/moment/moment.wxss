@@ -1,0 +1,30 @@
+
+.wrapper{
+	width: 100%;
+	padding: 31rpx;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+.top_area{
+	width: 100%;
+	height: 130rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	background-color: pink;
+}
+

@@ -8,26 +8,15 @@
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				
-			}
-		},
-		methods: {
-			
-		}
-	}
-</script>
+<script></script>
 
 <style>
-.wrapper{
+.wrapper {
 	width: 100%;
 	padding: 31upx;
 	box-sizing: border-box;
 }
-.top_area{
+.top_area {
 	width: 100%;
 	height: 130upx;
 	display: flex;

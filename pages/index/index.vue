@@ -82,6 +82,10 @@
 			</view>
 		</view>
 		<!-- 广告位 -->
+		
+		<view>
+			<image src="http://qnimage.xiteng.com/4@2x.png" class="advertise"></image>
+		</view>
 
 		<!-- 研究报告 -->
 		<view class="report-items-wrapper">
@@ -389,6 +393,12 @@
 		margin-top: 20upx;
 		padding: 20upx 27upx;
 		box-sizing: border-box;
+	}
+	
+	.advertise{
+		width: 750upx;
+		height: 280upx;
+		margin-bottom: 0upx;
 	}
 
 	.star-companys {

@@ -546,6 +546,10 @@ var _default2 =
 
 
 
+
+
+
+
 var _tabs = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/tabs.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/tabs/tabs.vue"));
 var _tabPane = _interopRequireDefault(__webpack_require__(/*! @/components/tabs/tabPane.vue */ "../../../../../../../Users/wangq/Desktop/ehealth/ehealth-client/components/tabs/tabPane.vue"));
 

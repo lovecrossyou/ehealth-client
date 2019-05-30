@@ -7,7 +7,6 @@
 				<swiper-item class="swiper-container" v-for="(img,index) in imgs" :key="index" :item-id="img" :data-year="index">
 					<view class="swiper-item" :animation="animationData[index]">
 						<view class="xingfu">
-
 						</view>
 						<view class="yueka">
 							1.5万人讨论
@@ -95,9 +94,43 @@
 			</scroll-view>
 		</view>
 		<!-- 产业问答 -->
-		<view class="star-companys">
+		<view class="ask-wrapper">
 			<naviTitle title="产业问答"></naviTitle>
+			<view class="ask-tabs">
+				<view class="ask-tab-item-active">
+					政策
+				</view>
+				<view class="ask-tab-item">
+					企业管理
+				</view>
+				<view class="ask-tab-item">
+					员工
+				</view>
+				<view class="ask-tab-item">
+					行业
+				</view>
+			</view>
 
+			<view class="ask-list">
+				<view class="ask-list-item">
+					<view class="ask-list-item-title">如何看待养老机构改革？</view>
+					<view class="ask-list-item-footer">
+						<image src="../../static/icon_man.png" class="ask-list-item-footer-icon"></image>
+						<view class="participate-count">
+							1562人已参与
+						</view>
+					</view>
+				</view>
+				<view class="ask-list-item">
+					<view class="ask-list-item-title">北京的康养试运行是什么意思？</view>
+					<view class="ask-list-item-footer">
+						<image src="../../static/icon_man.png" class="ask-list-item-footer-icon"></image>
+						<view class="participate-count">
+							1.6万人已参与
+						</view>
+					</view>
+				</view>
+			</view>
 		</view>
 	</view>
 </template>
@@ -173,6 +206,98 @@
 		background: #f1f1f1;
 	}
 
+	.ask-tabs {
+		padding: 27upx 0;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.ask-list-item {
+		width: 690upx;
+		height: 168upx;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0upx 1upx 12upx 0upx rgba(0, 0, 0, 0.08);
+		border-radius: 4upx;
+		position: relative;
+		margin-bottom: 20upx;
+	}
+
+	.ask-list-item-title {
+
+		font-size: 32upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(51, 51, 51, 1);
+		line-height: 44upx;
+		position: absolute;
+		left: 44upx;
+		top: 44upx;
+	}
+
+	.ask-list-item-footer {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: absolute;
+		left: 44upx;
+		bottom: 37upx;
+		margin-top: 30upx;
+	}
+
+	.participate-count {
+		font-size: 26upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(153, 153, 153, 1);
+		line-height: 44upx;
+		margin-left: 14upx;
+	}
+
+	.ask-list-item-footer-icon {
+		width: 30upx;
+		height: 26upx;
+	}
+
+
+
+	.ask-tab-item-active {
+		width: 121upx;
+		height: 46upx;
+		background: rgba(156, 207, 255, 1);
+		opacity: 0.6;
+		border-radius: 4upx;
+		margin-right: 20upx;
+		line-height: 46upx;
+
+		font-size: 28upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(16, 115, 227, 1);
+		text-align: center;
+
+
+
+	}
+
+	.ask-tab-item {
+		width: 149upx;
+		height: 46upx;
+		background: rgba(236, 235, 235, 1);
+		border: 1upx solid rgba(213, 213, 213, 1);
+		opacity: 0.6;
+		border-radius: 4upx;
+		margin-right: 20upx;
+
+		font-size: 28upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(102, 102, 102, 1);
+		line-height: 44upx;
+		text-align: center;
+	}
+
 	.industry-index {
 		background-color: #FFFFFF;
 		margin-top: 20upx;
@@ -194,6 +319,13 @@
 		padding: 20upx 27upx;
 		box-sizing: border-box;
 		height: 380upx;
+	}
+	
+	.ask-wrapper{
+		background-color: #FFFFFF;
+		margin-top: 20upx;
+		padding: 20upx 27upx;
+		box-sizing: border-box;
 	}
 
 	.report-items-wrapper {

@@ -1,6 +1,6 @@
 <template>
 	<view class="item-wrapper">
-		<image src="http://qnimage.xiteng.com/4@2x.png" class="logo">
+		<image src="http://qnimage.xiteng.com/4@2x.png" class="logo" mode="aspectFit">
 
 		</image>
 

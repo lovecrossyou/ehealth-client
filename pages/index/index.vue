@@ -522,7 +522,7 @@
 		height: 280upx;
 		width: 671upx;
 		text-align: center;
-		broder-radius: 30upx;
+		border-radius: 30upx;
 		position: relative;
 		/* background-color: #FF4161; */
 		/* background: url('http://qnimage.xiteng.com/huiiyuan_ka@2x.png') no-repeat center center; */

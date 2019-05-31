@@ -159,15 +159,11 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
   data: function data() {
     return {
       tabList2: [{
-        name: '待排队' },
+        name: '行业交流' },
       {
-        name: '待入厂' },
+        name: '培训' },
       {
-        name: '待出厂' },
-      {
-        name: '待送达' },
-      {
-        name: '全部' }],
+        name: '咨询' }],
 
       tabList3: [{
         name: '精选' },

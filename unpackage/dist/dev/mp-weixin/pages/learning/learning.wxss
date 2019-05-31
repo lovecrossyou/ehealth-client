@@ -115,10 +115,6 @@
 
 
 
-
-
-
-
 /* @import "~@/styles/icon.scss"; */
 .main {
 	width: 100%;

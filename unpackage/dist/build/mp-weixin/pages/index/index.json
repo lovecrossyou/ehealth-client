@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "首页",
-  "usingComponents": {
-    "navi-title": "/components/navi-title",
-    "star-company-item": "/pages/index/components/star-company-item",
-    "report-item": "/pages/index/components/report-item"
-  }
-}

@@ -1,1 +1,0 @@
-<view class="tab-pane-item" bind:__l="__l"><slot></slot></view>

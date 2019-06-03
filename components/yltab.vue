@@ -19,7 +19,6 @@
 				if (this.selectIndex === index) return false;
 				this.selectIndex = index;
 				this.$emit('change', index);
-				// console.log('xx', event);
 			}
 		}
 	}

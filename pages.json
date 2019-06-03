@@ -18,7 +18,13 @@
 		}, {
 			"path": "pages/learning/learning",
 			"style": {
-				"navigationBarTitleText": "学习"
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "学习",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent" //透明渐变导航栏,
+					}
+				}
 			}
 		}, {
 			"path": "pages/mine/mine",

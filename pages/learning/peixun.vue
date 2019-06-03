@@ -19,13 +19,40 @@
 
 						<view class="zhuanjia">
 							<view class="zhuanjia-item">
-
+								<image :src="avatar" class="avatar"></image>
+								<view class="zhuanjia-title">
+									康养学会
+								</view>
+								<view class="zhuanjia-desc">
+									12765位关注者
+								</view>
+								<view class="zhuanjia-item-button">
+									+关注
+								</view>
 							</view>
 							<view class="zhuanjia-item">
-
+								<image :src="avatar" class="avatar"></image>
+								<view class="zhuanjia-title">
+									康养学会
+								</view>
+								<view class="zhuanjia-desc">
+									12765位关注者
+								</view>
+								<view class="zhuanjia-item-button">
+									+关注
+								</view>
 							</view>
 							<view class="zhuanjia-item">
-
+								<image :src="avatar" class="avatar"></image>
+								<view class="zhuanjia-title">
+									康养学会
+								</view>
+								<view class="zhuanjia-desc">
+									12765位关注者
+								</view>
+								<view class="zhuanjia-item-button">
+									+关注
+								</view>
 							</view>
 						</view>
 					</view>
@@ -48,10 +75,14 @@
 
 	const banner =
 		'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559565555450&di=c49d1ae925c49a9dc5a3ca291cf9a64d&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ce8b582439aea84a0e282ba855d9.jpg'
+
+	const avatar =
+		'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559567437010&di=c08a60c34d402310b550d28ab3091179&imgtype=0&src=http%3A%2F%2Fi3.hexun.com%2F2017-04-21%2F188923807.jpg';
 	export default {
 		data() {
 			return {
 				banner,
+				avatar,
 				tabList2: [{
 					name: '关注'
 				}, {
@@ -109,6 +140,24 @@
 		height: 320upx;
 	}
 
+	.zhuanjia-title {
+
+		font-size: 30upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+		line-height: 44upx;
+	}
+
+	.zhuanjia-desc {
+
+		font-size: 24upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(153, 153, 153, 1);
+		line-height: 44upx;
+	}
+
 	.jihua {
 		margin-top: 40upx;
 		margin-bottom: 60upx;
@@ -122,10 +171,21 @@
 
 	.nav-title-wrapper {
 		padding: 0 20upx 23upx 20upx;
-		
+
 	}
-	
-	.zhuanjia{
+
+	.zhuanjia-item-button {
+		width: 104upx;
+		height: 44upx;
+		background: rgba(71, 106, 255, 1);
+		border-radius: 10upx;
+		
+		
+		color: 26upx;
+		color: #FFFFFF;
+	}
+
+	.zhuanjia {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
@@ -141,7 +201,16 @@
 		background: rgba(255, 255, 255, 1);
 		box-shadow: 0upx -1upx 18upx 0upx rgba(34, 32, 182, 0.12);
 		border-radius: 10upx;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		/* margin-right: 16upx; */
+	}
+
+	.avatar {
+		width: 100upx;
+		height: 100upx;
+		border-radius: 50%;
 	}
 
 	div,

@@ -156,6 +156,9 @@
 		font-weight: 400;
 		color: rgba(153, 153, 153, 1);
 		line-height: 44upx;
+		
+		text-align: center;
+		margin-top: 30upx;
 	}
 
 	.jihua {
@@ -183,6 +186,7 @@
 		
 		color: 26upx;
 		color: #FFFFFF;
+		text-align: center;
 	}
 
 	.zhuanjia {
@@ -211,6 +215,7 @@
 		width: 100upx;
 		height: 100upx;
 		border-radius: 50%;
+		margin-top: 24upx;
 	}
 
 	div,

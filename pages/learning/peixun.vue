@@ -7,7 +7,27 @@
 			<swiper-item v-for="(item,index) in tabList2" :key="index">
 				<block v-if="index===0">
 					<view class="item-group">
-						{{index}}
+						<image :src="banner" class="banner" mode="aspectFill">
+
+						</image>
+						<view class="jihua">
+
+						</view>
+						<view class="nav-title-wrapper">
+							<naviTitle title="专家团队"></naviTitle>
+						</view>
+
+						<view class="zhuanjia">
+							<view class="zhuanjia-item">
+
+							</view>
+							<view class="zhuanjia-item">
+
+							</view>
+							<view class="zhuanjia-item">
+
+							</view>
+						</view>
 					</view>
 				</block>
 				<block v-if="index===1">
@@ -24,10 +44,14 @@
 
 <script>
 	import WucTab from '@/components/wuc-tab/wuc-tab.vue';
+	import naviTitle from "@/components/navi-title.vue";
 
+	const banner =
+		'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1559565555450&di=c49d1ae925c49a9dc5a3ca291cf9a64d&imgtype=0&src=http%3A%2F%2Fimg.zcool.cn%2Fcommunity%2F01ce8b582439aea84a0e282ba855d9.jpg'
 	export default {
 		data() {
 			return {
+				banner,
 				tabList2: [{
 					name: '关注'
 				}, {
@@ -47,6 +71,7 @@
 
 		components: {
 			WucTab,
+			naviTitle
 			// JiaoLiu,
 			// PeiXun
 		},
@@ -66,21 +91,6 @@
 				} = e.target;
 				this.TabCur2 = current;
 			},
-			swiperChange3(e) {
-				let {
-					current
-				} = e.target;
-				this.TabCur3 = current;
-			},
-			swiperChange4(e) {
-				let {
-					current
-				} = e.target;
-				this.TabCur4 = current;
-			},
-			swiperChange5(e) {
-				this.TabCur5 = e.target.current;
-			}
 		},
 
 		onReady() {}
@@ -92,6 +102,46 @@
 	.main {
 		width: 100%;
 		height: 100%;
+	}
+
+	.banner {
+		width: 100%;
+		height: 320upx;
+	}
+
+	.jihua {
+		margin-top: 40upx;
+		margin-bottom: 60upx;
+		margin-left: 30upx;
+		width: 692upx;
+		height: 237upx;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0upx -1upx 18upx 0upx rgba(34, 32, 182, 0.12);
+		border-radius: 10upx;
+	}
+
+	.nav-title-wrapper {
+		padding: 0 20upx 23upx 20upx;
+		
+	}
+	
+	.zhuanjia{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-bottom: 20upx;
+		box-sizing: border-box;
+		padding-left: 10upx;
+		padding-right: 10upx;
+	}
+
+	.zhuanjia-item {
+		width: 218upx;
+		height: 299upx;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0upx -1upx 18upx 0upx rgba(34, 32, 182, 0.12);
+		border-radius: 10upx;
+		/* margin-right: 16upx; */
 	}
 
 	div,
@@ -191,7 +241,7 @@
 	,
 	.item-group {
 		width: 100%;
-		padding: 20upx;
+		/* padding: 20upx; */
 		background-color: #FFFFFF;
 	}
 

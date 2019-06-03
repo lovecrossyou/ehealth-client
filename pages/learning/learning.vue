@@ -164,7 +164,7 @@
 	,
 	.item-group {
 		width: 100%;
-		padding: 20upx;
+		/* padding: 20upx; */
 		background-color: #FFFFFF;
 		height: 100%;
 	}

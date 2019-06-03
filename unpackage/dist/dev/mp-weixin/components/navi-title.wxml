@@ -1,1 +1,0 @@
-<view class="main" bind:__l="__l"><view class="title">{{''+title+''}}</view><view class="subtitle">更多</view></view>

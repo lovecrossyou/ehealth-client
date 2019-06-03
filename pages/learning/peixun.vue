@@ -1,16 +1,22 @@
 <template>
 	<div class="main">
-		<YLTab @change="tabChange"></YLTab>
-		<block v-if="TabCur===0">
-			<view class="item-group">
-				<JiaoLiu></JiaoLiu>
-			</view>
-		</block>
-		<block v-if="TabCur===1">
-			<view class="item-group">
-				<PeiXun></PeiXun>
-			</view>
-		</block>
+		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2" tab-class="text-center text-black bg-white"
+		 select-class="text-blue text-xl"></wuc-tab>
+		<swiper :current="TabCur2" class="swiper" duration="300" :circular="true" indicator-color="rgba(255,255,255,0)"
+		 indicator-active-color="rgba(255,255,255,0)" @change="swiperChange2">
+			<swiper-item v-for="(item,index) in tabList2" :key="index">
+				<block v-if="index===0">
+					<view class="item-group">
+						{{index}}
+					</view>
+				</block>
+				<block v-if="index===1">
+					<view class="item-group">
+						{{index}}
+					</view>
+				</block>
+			</swiper-item>
+		</swiper>
 	</div>
 
 </template>
@@ -18,29 +24,31 @@
 
 <script>
 	import WucTab from '@/components/wuc-tab/wuc-tab.vue';
-	import YLTab from '@/components/yltab.vue';
-	import JiaoLiu from "./jiaoliu.vue";
-	import PeiXun from "./peixun.vue";
 
 	export default {
 		data() {
 			return {
 				tabList2: [{
-					name: '行业交流'
+					name: '关注'
 				}, {
-					name: '培训'
+					name: '推荐'
 				}, {
-					name: '咨询'
+					name: '养老护理'
+				}, {
+					name: '营养保健'
+				}, {
+					name: '企业管理'
+				}, {
+					name: '产业新闻'
 				}],
-				TabCur: 0,
+				TabCur2: 0,
 			};
 		},
 
 		components: {
 			WucTab,
-			JiaoLiu,
-			PeiXun,
-			YLTab
+			// JiaoLiu,
+			// PeiXun
 		},
 
 		computed: {},
@@ -49,11 +57,29 @@
 			tabChange(index) {
 				this.TabCur = index;
 			},
+			tabChange2(index) {
+				this.TabCur2 = index;
+			},
 			swiperChange2(e) {
 				let {
 					current
 				} = e.target;
 				this.TabCur2 = current;
+			},
+			swiperChange3(e) {
+				let {
+					current
+				} = e.target;
+				this.TabCur3 = current;
+			},
+			swiperChange4(e) {
+				let {
+					current
+				} = e.target;
+				this.TabCur4 = current;
+			},
+			swiperChange5(e) {
+				this.TabCur5 = e.target.current;
 			}
 		},
 
@@ -65,6 +91,7 @@
 	/* @import "~@/styles/icon.scss"; */
 	.main {
 		width: 100%;
+		height: 100%;
 	}
 
 	div,
@@ -166,7 +193,6 @@
 		width: 100%;
 		padding: 20upx;
 		background-color: #FFFFFF;
-		height: 100%;
 	}
 
 	.btn-group>button {

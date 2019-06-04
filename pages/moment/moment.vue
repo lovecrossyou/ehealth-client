@@ -112,7 +112,7 @@
 			<view class="publisher_info">
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3035998294,2703805772&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
-					<view class="publisher_name">任正非</view>
+					<view class="publisher_name">雷军</view>
 					<view class="publisher_corporation">小米科技有限公司</view>
 				</view>
 				<view class="attention_btn">+ 关注</view>

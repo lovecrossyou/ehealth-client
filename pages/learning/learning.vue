@@ -77,12 +77,7 @@
 		font-size: 28upx;
 		background-color: #f1f1f1;
 	}
-
-	.swiper {
-		height: 1134upx;
-
-	}
-
+	
 	.cu-bar {
 		display: flex;
 		position: relative;
@@ -166,7 +161,7 @@
 		width: 100%;
 		/* padding: 20upx; */
 		background-color: #FFFFFF;
-		height: 100%;
+		/* height: 100%; */
 	}
 
 	.btn-group>button {

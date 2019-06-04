@@ -2,68 +2,94 @@
 	<div class="main">
 		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2" tab-class="text-center text-black bg-white"
 		 select-class="text-blue text-xl"></wuc-tab>
-		<swiper :current="TabCur2" class="swiper" duration="300" :circular="true" indicator-color="rgba(255,255,255,0)"
-		 indicator-active-color="rgba(255,255,255,0)" @change="swiperChange2">
-			<swiper-item v-for="(item,index) in tabList2" :key="index">
-				<block v-if="index===0">
-					<view class="item-group">
-						<image :src="banner" class="banner" mode="aspectFill">
+		<view class="item-group">
+			<image :src="banner" class="banner" mode="aspectFill">
 
-						</image>
-						<view class="jihua">
+			</image>
+			<!-- 加入培训计划 -->
+			<view class="jihua">
 
-						</view>
-						<view class="nav-title-wrapper">
-							<naviTitle title="专家团队"></naviTitle>
-						</view>
-
-						<view class="zhuanjia">
-							<view class="zhuanjia-item">
-								<image :src="avatar" class="avatar"></image>
-								<view class="zhuanjia-title">
-									康养学会
-								</view>
-								<view class="zhuanjia-desc">
-									12765位关注者
-								</view>
-								<view class="zhuanjia-item-button">
-									+关注
-								</view>
-							</view>
-							<view class="zhuanjia-item">
-								<image :src="avatar" class="avatar"></image>
-								<view class="zhuanjia-title">
-									康养学会
-								</view>
-								<view class="zhuanjia-desc">
-									12765位关注者
-								</view>
-								<view class="zhuanjia-item-button">
-									+关注
-								</view>
-							</view>
-							<view class="zhuanjia-item">
-								<image :src="avatar" class="avatar"></image>
-								<view class="zhuanjia-title">
-									康养学会
-								</view>
-								<view class="zhuanjia-desc">
-									12765位关注者
-								</view>
-								<view class="zhuanjia-item-button">
-									+关注
-								</view>
-							</view>
-						</view>
+			</view>
+			<!-- 专家团队 -->
+			<view class="nav-title-wrapper">
+				<naviTitle title="专家团队"></naviTitle>
+			</view>
+			<view class="zhuanjia">
+				<view class="zhuanjia-item">
+					<image :src="avatar" class="avatar"></image>
+					<view class="zhuanjia-title">
+						康养学会
 					</view>
-				</block>
-				<block v-if="index===1">
-					<view class="item-group">
-						{{index}}
+					<view class="zhuanjia-desc">
+						12765位关注者
 					</view>
-				</block>
-			</swiper-item>
-		</swiper>
+					<view class="zhuanjia-item-button">
+						+关注
+					</view>
+				</view>
+				<view class="zhuanjia-item">
+					<image :src="avatar" class="avatar"></image>
+					<view class="zhuanjia-title">
+						康养学会
+					</view>
+					<view class="zhuanjia-desc">
+						12765位关注者
+					</view>
+					<view class="zhuanjia-item-button">
+						+关注
+					</view>
+				</view>
+				<view class="zhuanjia-item">
+					<image :src="avatar" class="avatar"></image>
+					<view class="zhuanjia-title">
+						康养学会
+					</view>
+					<view class="zhuanjia-desc">
+						12765位关注者
+					</view>
+					<view class="zhuanjia-item-button">
+						+关注
+					</view>
+				</view>
+			</view>
+
+			<!-- 列表 -->
+			<view class="list">
+				<view class="list-item">
+					<image :src="avatar" class="list-item-image">
+						<view class="list-item-tips">限时特惠</view>
+					</image>
+					<view class="list-item-name">
+						老人护理课程
+					</view>
+					<view class="list-item-desc">
+						5.4万人观看
+					</view>
+				</view>
+				<view class="list-item">
+					<image :src="avatar" class="list-item-image">
+						<view class="list-item-tips">限时特惠</view>
+					</image>
+					<view class="list-item-name">
+						老人护理课程
+					</view>
+					<view class="list-item-desc">
+						5.4万人观看
+					</view>
+				</view>
+				<view class="list-item">
+					<image :src="avatar" class="list-item-image">
+						<view class="list-item-tips">限时特惠</view>
+					</image>
+					<view class="list-item-name">
+						老人护理课程
+					</view>
+					<view class="list-item-desc">
+						5.4万人观看
+					</view>
+				</view>
+			</view>
+		</view>
 	</div>
 
 </template>
@@ -132,12 +158,60 @@
 	/* @import "~@/styles/icon.scss"; */
 	.main {
 		width: 100%;
-		height: 100%;
+		/* height: 100%; */
 	}
 
 	.banner {
 		width: 100%;
 		height: 320upx;
+	}
+
+	.list {
+		width: 100%;
+		padding: 30upx;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.list-item {
+		width: 336upx;
+		margin-top: 40upx;
+	}
+
+	.list-item-image {
+		width: 336upx;
+		height: 280upx;
+		border-radius: 10upx;
+		position: relative;
+	}
+
+	.list-item-tips {
+		width: 114upx;
+		height: 39upx;
+		background: rgba(235, 46, 46, 1);
+
+		position: absolute;
+		left: 14upx;
+		top: 16upx;
+	}
+
+	.list-item-name {
+		font-size: 32upx;
+		font-family: PingFangSC-Medium;
+		font-weight: 500;
+		color: rgba(51, 51, 51, 1);
+		margin-top: 29upx;
+	}
+
+	.list-item-desc {
+
+		font-size: 26upx;
+		font-family: PingFangSC-Regular;
+		font-weight: 400;
+		color: rgba(153, 153, 153, 1);
 	}
 
 	.zhuanjia-title {
@@ -156,7 +230,7 @@
 		font-weight: 400;
 		color: rgba(153, 153, 153, 1);
 		line-height: 44upx;
-		
+
 		text-align: center;
 		margin-top: 30upx;
 	}
@@ -182,8 +256,8 @@
 		height: 44upx;
 		background: rgba(71, 106, 255, 1);
 		border-radius: 10upx;
-		
-		
+
+
 		color: 26upx;
 		color: #FFFFFF;
 		text-align: center;
@@ -208,7 +282,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		/* margin-right: 16upx; */
+		margin-right: 16upx;
 	}
 
 	.avatar {

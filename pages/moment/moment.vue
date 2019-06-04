@@ -8,7 +8,12 @@
 				<view>发布</view>
 			</view>
 		</view>
-		<view class="search_area"><input type="text" value="" placeholder="搜索行业动态" /></view>
+		<view class="search_wrapper">
+			<view class="search_area">
+				<image src="../../static/moment/icon_search@2x.png" mode="" class="search_icon"></image>
+				<input type="text" value="" placeholder="搜索行业动态" class="search_input"/>
+			</view>
+		</view>
 		<!-- 来自你的产业朋友 -->
 		<view class="from_industry">
 			<view class="top_title">来自你的产业朋友</view>
@@ -20,7 +25,37 @@
 				</view>
 				<image src="../../static/moment/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_content">营养领域康养行业怎么发展？2019第四届中国医疗 器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
+			<!-- 文字展开隐藏 -->
+			<hideText></hideText>
+			<!-- 点赞 & 转发 & 评论 -->
+			<view class="operation_list">
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">51</view>
+				</view>
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">167</view>
+				</view>
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">1238</view>
+				</view>
+			</view>
+		</view>
+		<!-- 来自你的投资人朋友 -->
+		<view class="from_industry">
+			<view class="top_title">来自你的投资人朋友</view>
+			<view class="publisher_info">
+				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1194115311,3137518246&fm=11&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
+				<view class="publisher_presentation">
+					<view class="publisher_name">任正非</view>
+					<view class="publisher_corporation">华为技术有限公司</view>
+				</view>
+				<image src="../../static/moment/icon_arrow_down@2x.png" class="hidden_arrows"></image>
+			</view>
+			<!-- 文字展开隐藏 -->
+			<hideText></hideText>
 			<view class="publish_image">
 				<image src="http://img2.imgtn.bdimg.com/it/u=334514814,3940243718&fm=26&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=457503980,2486741247&fm=11&gp=0.jpg" mode="aspectFill"></image>
@@ -29,35 +64,134 @@
 			<!-- 点赞 & 转发 & 评论 -->
 			<view class="operation_list">
 				<view class="bottom_operation">
-					<view class="operation_icon">
-						<image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image>
-					</view>
-					<view class="operation_num">1.5W</view>
+					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">51</view>
 				</view>
 				<view class="bottom_operation">
-					<view class="operation_icon">
-						<image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image>
-					</view>
-					<view class="operation_num">1.5W</view>
+					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">167</view>
 				</view>
 				<view class="bottom_operation">
-					<view class="operation_icon">
-						<image src="../../static/moment/btn_like @2x.png" mode="aspectFill"></image>
+					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">1238</view>
+				</view>
+			</view>
+		</view>
+		<!-- 来自产业机构 -->
+		<view class="from_industry">
+			<view class="top_title">来自产业机构</view>
+			<view class="organization_wrapper">
+				<block v-for="(item, index) in organizationList" :key="index">
+					<view class="organization_area">
+						<image :src="item.img" class="organization_head_img" mode="aspectFill"></image>
+						<view class="organization_name">{{ item.name }}</view>
+						<view class="follower_num">{{ item.followerNum }}位关注者</view>
+						<view class="attention_btn" v-if="item.isAttention" @click="giveAttention(index)">+ 关注</view>
+						<view class="attention_btn" v-else @click="giveAttention(index)">✓已关注</view>
 					</view>
-					<view class="operation_num">1.5W</view>
+				</block>
+			</view>
+		</view>
+		<!-- 来自创新项目 -->
+		<view class="from_industry">
+			<view class="top_title">来自产业机构</view>
+			<block block v-for="(item, index) in innovateList" :key="index">
+				<view class="innovate_area">
+					<image :src="item.img" mode="aspectFill" class="sleep_img"></image>
+					<view class="right_project_detail">
+						<view class="project_name">{{item.name}}</view>
+						<view class="financing_goal">融资目标：{{item.financingGoal}}万</view>
+						<view class="stock_num">出让股份：{{item.stockNum}}%</view>
+					</view>
+				</view>
+			</block>
+		</view>
+		<!-- 推广 -->
+		<view class="from_industry">
+			<view class="top_title">推广</view>
+			<view class="publisher_info">
+				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3035998294,2703805772&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
+				<view class="publisher_presentation">
+					<view class="publisher_name">任正非</view>
+					<view class="publisher_corporation">小米科技有限公司</view>
+				</view>
+				<view class="attention_btn">+ 关注</view>
+			</view>
+			<!-- 文字展开隐藏 -->
+			<hideText></hideText>
+			<view class="publish_image">
+				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1205485994,167777535&fm=26&gp=0.jpg" mode="aspectFill"></image>
+				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2103092801,962345008&fm=26&gp=0.jpg" mode="aspectFill"></image>
+			</view>
+			<!-- 点赞 & 转发 & 评论 -->
+			<view class="operation_list">
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">51</view>
+				</view>
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">167</view>
+				</view>
+				<view class="bottom_operation">
+					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
+					<view class="operation_num">1238</view>
 				</view>
 			</view>
 		</view>
 	</view>
 </template>
 <script>
+import hideText from './components/hideText.vue';
 export default {
 	data() {
-		return {};
+		return {
+			organizationList: [
+				{
+					isAttention: false,
+					name: '康养学会',
+					followerNum: '1258',
+					img: 'http://img0.imgtn.bdimg.com/it/u=3186827157,3826494865&fm=11&gp=0.jpg'
+				},
+				{
+					isAttention: true,
+					name: '老年学学会',
+					followerNum: '658',
+					img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2083743049,1552929855&fm=15&gp=0.jpg'
+				},
+				{
+					isAttention: false,
+					name: '康养学会',
+					followerNum: '529',
+					img: 'http://img4.imgtn.bdimg.com/it/u=1593262122,2201972416&fm=26&gp=0.jpg'
+				}
+			],
+			innovateList:[
+				{
+					name: '老年康养睡眠设备',
+					img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2349968693,3858415515&fm=26&gp=0.jpg',
+					financingGoal:'300',
+					stockNum:'10'
+				},
+				{
+					name: '中老年康养养生基地',
+					img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1589614470,1882171006&fm=26&gp=0.jpg',
+					financingGoal:'450',
+					stockNum:'13'
+				},
+			]
+			
+		};
 	},
-	components: {},
+	components: {
+		hideText
+	},
 	computed: {},
-	methods: {}
+	methods: {
+		giveAttention(index){
+			this.organizationList[index].isAttention = !this.organizationList[index].isAttention;
+		}
+	}
 };
 </script>
 
@@ -91,32 +225,42 @@ export default {
 	height: 32upx;
 	margin-right: 8upx;
 }
-.search_area {
+.search_wrapper {
 	width: 100%;
-	height: 100upx;
+	height: 150upx;
 	display: flex;
 	flex-direction: row;
-	align-items: center;
 	background: #fff;
 	border-radius: 10upx;
 	font-size: 28upx;
-	padding: 0 30upx;
+	padding: 15upx 30upx 0 30upx;
 	box-sizing: border-box;
 }
-.search_area input {
-	width: 690upx;
+.search_area{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	background-color: #F5F4F4;
 	height: 75upx;
-	background: url('../../static/moment/icon_search@2x.png') no-repeat 4% center;
-	background-size: 31upx 31upx;
-	background-color: #f5f4f4;
-	padding: 0 70upx;
+	padding: 0 31upx;
 	box-sizing: border-box;
 }
+.search_icon{
+	width: 31upx;
+	height: 31upx;
+	margin-right: 13upx;
+}
+.search_input{
+	flex: 1;
+	height: 31upx;
+	background-color: #F5F4F4;
+}
+
 .from_industry {
 	width: 100%;
 	background-color: #fff;
-	padding-top: 70upx;
-	box-sizing: border-box;
+	margin-bottom: 20upx;
 }
 .top_title {
 	width: 100%;
@@ -154,55 +298,127 @@ export default {
 .publisher_corporation {
 	color: #999;
 	font-size: 24upx;
-	margin-top: 8upx;
+	margin-top: 5upx;
 }
 .hidden_arrows {
 	width: 30upx;
 	height: 16upx;
 	margin: 10upx 0 0 10upx;
 }
-.publish_content{
-	width: 100%;
-	padding: 0 31upx;
-	box-sizing: border-box;
-	color: #333333;
-	font-size: 30upx;
-}
-.publish_image{
+.publish_image {
 	width: 100%;
 	padding: 0 31upx;
 	box-sizing: border-box;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	/* justify-content: space-between; */
 	margin-top: 27upx;
 }
-.publish_image image{
+.publish_image image {
 	width: 220upx;
 	height: 220upx;
 	border-radius: 6upx;
 	margin: 0 8upx;
 }
-.operation_list{
+.operation_list {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 36upx 68upx 25upx 68upx;
+	padding: 36upx 75upx 25upx 75upx;
 	box-sizing: border-box;
 }
-.bottom_operation{
+.bottom_operation {
 	display: flex;
 	flex-direction: row;
 }
-.operation_icon image{
+.operation_icon image {
 	width: 40upx;
 	height: 40upx;
 	margin-right: 7upx;
 }
-.operation_num{
-	color: #A6A6A8;
+.operation_num {
+	color: #a6a6a8;
 	font-size: 26upx;
+	margin-top: 5upx;
+}
+.organization_wrapper {
+	width: 100%;
+	background-color: #fff;
+	padding: 28upx 31upx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.organization_area {
+	width: 218upx;
+	/* height:299upx; */
+	background-color: #f8f8f8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 24upx 0;
+	box-sizing: border-box;
+}
+.organization_head_img {
+	width: 100upx;
+	height: 100upx;
+	border-radius: 50%;
+}
+.organization_name {
+	color: #333333;
+	font-size: 30upx;
+	font-weight: bold;
+	margin-top: 18upx;
+}
+.follower_num {
+	color: #999;
+	font-size: 24upx;
+	margin-top: 12upx;
+}
+.attention_btn {
+	width: 104upx;
+	height: 44upx;
+	background: #476aff;
+	border-radius: 10upx;
+	color: #ffffff;
+	font-size: 22upx;
+	margin-top: 26upx;
+	text-align: center;
+	line-height: 44upx;
+}
+.innovate_area{
+	width: 100%;
+	padding: 30upx;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	background-color: #fff;
+}
+.sleep_img{
+	width: 140upx;
+	height: 140upx;
+}
+.right_project_detail{
+	flex: 1;
+	margin:5upx 0 0 25upx;
+	display: flex;
+	flex-direction: column;
+}
+.project_name{
+	color: #333333;
+	font-size: 30upx;
+	font-weight: bold;
+}
+.financing_goal{
+	color: #777;
+	font-size: 24upx;
+	margin-top: 30upx;
+}
+.stock_num{
+	color: #777;
+	font-size: 24upx;	
 	margin-top: 5upx;
 }
 </style>

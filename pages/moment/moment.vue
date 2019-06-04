@@ -28,20 +28,7 @@
 			<!-- 文字展开隐藏 -->
 			<hideText></hideText>
 			<!-- 点赞 & 转发 & 评论 -->
-			<view class="operation_list">
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">51</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">167</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">1238</view>
-				</view>
-			</view>
+			<Operation transpondNum='51' commentNum='785' likeNum="88"></Operation>
 		</view>
 		<!-- 来自你的投资人朋友 -->
 		<view class="from_industry">
@@ -62,20 +49,7 @@
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4291489099,2387855543&fm=26&gp=0.jpg" mode="aspectFill"></image>
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<view class="operation_list">
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">51</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">167</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">1238</view>
-				</view>
-			</view>
+			<Operation transpondNum='555' commentNum='625' likeNum="85"></Operation>
 		</view>
 		<!-- 来自产业机构 -->
 		<view class="from_industry">
@@ -124,25 +98,13 @@
 				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2103092801,962345008&fm=26&gp=0.jpg" mode="aspectFill"></image>
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<view class="operation_list">
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">51</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">167</view>
-				</view>
-				<view class="bottom_operation">
-					<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
-					<view class="operation_num">1238</view>
-				</view>
-			</view>
+			<Operation transpondNum='123' commentNum='22' likeNum="22"></Operation>
 		</view>
 	</view>
 </template>
 <script>
 import hideText from './components/hideText.vue';
+import Operation from '@/components/Operation.vue'
 export default {
 	data() {
 		return {
@@ -184,7 +146,8 @@ export default {
 		};
 	},
 	components: {
-		hideText
+		hideText,
+		Operation	
 	},
 	computed: {},
 	methods: {
@@ -320,28 +283,6 @@ export default {
 	border-radius: 6upx;
 	margin: 0 8upx;
 }
-.operation_list {
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 36upx 75upx 25upx 75upx;
-	box-sizing: border-box;
-}
-.bottom_operation {
-	display: flex;
-	flex-direction: row;
-}
-.operation_icon image {
-	width: 40upx;
-	height: 40upx;
-	margin-right: 7upx;
-}
-.operation_num {
-	color: #a6a6a8;
-	font-size: 26upx;
-	margin-top: 5upx;
-}
 .organization_wrapper {
 	width: 100%;
 	background-color: #fff;
@@ -353,7 +294,6 @@ export default {
 }
 .organization_area {
 	width: 218upx;
-	/* height:299upx; */
 	background-color: #f8f8f8;
 	display: flex;
 	flex-direction: column;

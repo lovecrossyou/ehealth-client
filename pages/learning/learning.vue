@@ -11,6 +11,11 @@
 				<PeiXun></PeiXun>
 			</view>
 		</block>
+		<block v-if="TabCur===2">
+			<view class="item-group">
+				<ZiXun></ZiXun>
+			</view>
+		</block>
 	</div>
 
 </template>
@@ -21,7 +26,7 @@
 	import YLTab from '@/components/yltab.vue';
 	import JiaoLiu from "./jiaoliu.vue";
 	import PeiXun from "./peixun.vue";
-
+	import ZiXun from "./zixun.vue";
 	export default {
 		data() {
 			return {
@@ -40,7 +45,8 @@
 			WucTab,
 			JiaoLiu,
 			PeiXun,
-			YLTab
+			YLTab,
+			ZiXun
 		},
 
 		computed: {},

@@ -13,7 +13,13 @@
 		}, {
 			"path": "pages/business/business",
 			"style": {
-				"navigationBarTitleText": "企脉"
+				"navigationBarTitleText": "企脉",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent" //透明渐变导航栏,
+					}
+				}
 			}
 		}, {
 			"path": "pages/learning/learning",

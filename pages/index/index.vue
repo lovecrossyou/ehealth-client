@@ -97,7 +97,6 @@
 					<reportItem></reportItem>
 					<reportItem></reportItem>
 				</view>
-
 			</scroll-view>
 		</view>
 		<!-- 产业问答 -->

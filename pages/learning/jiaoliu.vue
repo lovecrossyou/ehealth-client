@@ -39,6 +39,25 @@
 					</div>
 				</div>
 			</div>
+			<div class="list-item">
+				<div class="list-item-bg">
+					<div class="list-item-bg-tips">可报名</div>
+					<image src="../../static/learn/icon_time.png" class="list-item-bg-clock"></image>
+					<div class="time">
+						2019-06-13 10：00
+					</div>
+					<div class="list-item-bg-button">立即报名</div>
+				</div>
+				<div class="title">
+					2019第一届国际康养博览会
+				</div>
+				<div class="footer">
+					<image src="../../static/learn/icon_location.png" class="icon_location"></image>
+					<div class="addr">
+						国家会议中心
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>

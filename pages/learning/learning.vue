@@ -11,6 +11,11 @@
 				<PeiXun></PeiXun>
 			</view>
 		</block>
+		<block v-if="TabCur===2">
+			<view class="item-group">
+				<ZiXun></ZiXun>
+			</view>
+		</block>
 	</div>
 
 </template>
@@ -21,7 +26,7 @@
 	import YLTab from '@/components/yltab.vue';
 	import JiaoLiu from "./jiaoliu.vue";
 	import PeiXun from "./peixun.vue";
-
+	import ZiXun from "./zixun.vue";
 	export default {
 		data() {
 			return {
@@ -40,7 +45,8 @@
 			WucTab,
 			JiaoLiu,
 			PeiXun,
-			YLTab
+			YLTab,
+			ZiXun
 		},
 
 		computed: {},
@@ -77,12 +83,7 @@
 		font-size: 28upx;
 		background-color: #f1f1f1;
 	}
-
-	.swiper {
-		height: 1134upx;
-
-	}
-
+	
 	.cu-bar {
 		display: flex;
 		position: relative;
@@ -166,7 +167,7 @@
 		width: 100%;
 		/* padding: 20upx; */
 		background-color: #FFFFFF;
-		height: 100%;
+		/* height: 100%; */
 	}
 
 	.btn-group>button {

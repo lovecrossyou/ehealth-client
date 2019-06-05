@@ -4,13 +4,13 @@
 		<view class="top_area">
 			<view class="dynamic_title">动态</view>
 			<view class="right_publish">
-				<image src="../../static/moment/btn_add@2x.png" class="publish_img"></image>
+				<image src="http://qnimage.xiteng.com/btn_add@2x.png" class="publish_img"></image>
 				<view>发布</view>
 			</view>
 		</view>
 		<view class="search_wrapper">
 			<view class="search_area">
-				<image src="../../static/moment/icon_search@2x.png" mode="" class="search_icon"></image>
+				<image src="http://qnimage.xiteng.com/icon_search@2x.png" mode="" class="search_icon"></image>
 				<input type="text" value="" placeholder="搜索行业动态" class="search_input"/>
 			</view>
 		</view>
@@ -23,10 +23,9 @@
 					<view class="publisher_name">牛牧</view>
 					<view class="publisher_corporation">北京富腾投资集团有限公司</view>
 				</view>
-				<image src="../../static/moment/icon_arrow_down@2x.png" class="hidden_arrows"></image>
+				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<!-- 文字展开隐藏 -->
-			<hideText></hideText>
+			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
 			<!-- 点赞 & 转发 & 评论 -->
 			<Operation transpondNum='51' commentNum='785' likeNum="88"></Operation>
 		</view>
@@ -39,10 +38,10 @@
 					<view class="publisher_name">任正非</view>
 					<view class="publisher_corporation">华为技术有限公司</view>
 				</view>
-				<image src="../../static/moment/icon_arrow_down@2x.png" class="hidden_arrows"></image>
+				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
 			<!-- 文字展开隐藏 -->
-			<hideText></hideText>
+			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
 			<view class="publish_image">
 				<image src="http://img2.imgtn.bdimg.com/it/u=334514814,3940243718&fm=26&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=457503980,2486741247&fm=11&gp=0.jpg" mode="aspectFill"></image>
@@ -91,8 +90,7 @@
 				</view>
 				<view class="attention_btn">+ 关注</view>
 			</view>
-			<!-- 文字展开隐藏 -->
-			<hideText></hideText>
+			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
 			<view class="publish_image">
 				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1205485994,167777535&fm=26&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2103092801,962345008&fm=26&gp=0.jpg" mode="aspectFill"></image>
@@ -262,6 +260,13 @@ export default {
 	color: #999;
 	font-size: 24upx;
 	margin-top: 5upx;
+}
+.publish_text {
+	width: 100%;
+	color: #333;
+	font-size: 30upx;
+	padding: 0 31upx;
+	box-sizing: border-box;
 }
 .hidden_arrows {
 	width: 30upx;

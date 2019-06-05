@@ -4,11 +4,11 @@
 
 		<view class="list">
 			<view class="friends">
-				<image src="../../static/business/icon_friends.png" class="friend-icon"></image>
+				<image src="http://qnimage.xiteng.com/icon_friends@2x.png" class="friend-icon"></image>
 				<view class="friend-title">65位好友</view>
 			</view>
 			<view class="qimai">
-				<image src="../../static/business/icon_find.png" class="friend-icon"></image>
+				<image src="http://qnimage.xiteng.com/icon_find@2x.png" class="friend-icon"></image>
 				<view class="friend-title">探索企脉</view>
 			</view>
 		</view>
@@ -31,11 +31,11 @@
 				</view>
 				<view class="friend_company">华为科技有限公司</view>
 				<view class="bottom_info">
-					<image src="../../static/business/icon_location.png" class="phone_icon"></image>
+					<image src="http://qnimage.xiteng.com/icon_location@2x.png" class="phone_icon"></image>
 					<view class="bottom_text">北京市西城区</view>
 				</view>
 				<view class="bottom_info">
-					<image src="../../static/business/icon_phone.png" class="phone_icon"></image>
+					<image src="http://qnimage.xiteng.com/icon_phone@2x.png" class="phone_icon"></image>
 					<view class="bottom_text">187 4334 6687</view>
 				</view>
 			</view>
@@ -186,7 +186,7 @@ export default {
 	margin: 48upx 0 40upx 0;
 }
 .friends {
-	background: url(../../static/business/image_background.png);
+	background: url("http://qnimage.xiteng.com/image_background@2x.png");
 	background-size: 328upx 120upx;
 	width: 328upx;
 	height: 120upx;
@@ -208,7 +208,7 @@ export default {
 	margin-left: 17upx;
 }
 .qimai {
-	background: url(../../static/business/image_find_background.png);
+	background: url("http://qnimage.xiteng.com/image_find_background@2x.png");
 	background-size: 328upx 120upx;
 	width: 328upx;
 	height: 120upx;

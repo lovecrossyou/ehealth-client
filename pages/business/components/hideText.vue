@@ -5,11 +5,11 @@
 			<div v-show="showFalse">
 				<div v-show="showTrue ? true : false" @click="showTrue = !showTrue" class="operation_text">
 					<div>展开</div>
-					<image src="../../static/moment/icon_arrow_down@2x.png" mode="" class="show_icon"></image>
+					<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" mode="" class="show_icon"></image>
 				</div>
 				<div v-show="showTrue ? false : true" @click="showTrue = !showTrue" class="operation_text">
 					<div>隐藏</div>
-					<image src="../../static/business/icon_arrow_up@2x.png" mode="" class="show_icon"></image>
+					<image src="http://qnimage.xiteng.com/icon_arrow_up@2x.png" mode="" class="show_icon"></image>
 				</div>
 			</div>
 		</div>

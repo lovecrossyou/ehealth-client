@@ -1,15 +1,15 @@
 <template>
 	<view class="operation_list">
 		<view class="bottom_operation">
-			<view class="operation_icon"><image src="../../static/moment/btn_share@2x.png" mode="aspectFill"></image></view>
+			<view class="operation_icon"><image src="http://qnimage.xiteng.com/btn_share@2x.png" mode="aspectFill"></image></view>
 			<view class="operation_num">{{ transpondNum }}</view>
 		</view>
 		<view class="bottom_operation">
-			<view class="operation_icon"><image src="../../static/moment/btn_comment@2x.png" mode="aspectFill"></image></view>
+			<view class="operation_icon"><image src="http://qnimage.xiteng.com/btn_comment@2x.png" mode="aspectFill"></image></view>
 			<view class="operation_num">{{ commentNum }}</view>
 		</view>
 		<view class="bottom_operation">
-			<view class="operation_icon"><image src="../../static/moment/btn_like@2x.png" mode="aspectFill"></image></view>
+			<view class="operation_icon"><image src="http://qnimage.xiteng.com/btn_like%20@2x.png" mode="aspectFill"></image></view>
 			<view class="operation_num">{{ likeNum }}</view>
 		</view>
 	</view>

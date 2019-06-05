@@ -8,7 +8,7 @@
 					<view class="top_info_area">
 						<view class="user_name">弗嵩</view>
 						<view class="vip_member">
-							<image src="../../static/mine/icon_vip@2x.png" class="v_icon"></image>
+							<image src="http://qnimage.xiteng.com/icon_vip@2x.png" class="v_icon"></image>
 							<view class="vip_text">钻石会员</view>
 						</view>
 					</view>
@@ -16,18 +16,18 @@
 				</view>
 				<view class="go_homepage">
 					<view class="homepage_text">主页</view>
-					<image src="../../static/mine/arrow_white@2x.png" class="next_icon"></image>
+					<image src="http://qnimage.xiteng.com/arrow_white@2x.png" class="next_icon"></image>
 				</view>
 			</view>
 			<view class="personal_signature">大道至简，天道酬勤</view>
 		</view>
 		<!-- 操作列表 -->
 		<view class="option_item_list">
-			<optionItem itemImg="../../static/mine/me_icon_knowledge@2x.png" mainText="知识"></optionItem>
-			<optionItem itemImg="../../static/mine/me_icon_circle@2x.png" mainText="圈子"></optionItem>
-			<optionItem itemImg="../../static/mine/me_icon_wallet@2x.png" mainText="钱包"></optionItem>
-			<optionItem itemImg="../../static/mine/me_icon_news@2x.png" mainText="消息"></optionItem>
-			<optionItem itemImg="../../static/mine/me_icon_set@2x.png" mainText="设置"></optionItem>
+			<optionItem itemImg="http://qnimage.xiteng.com/me_icon_knowledge@2x.png" mainText="知识"></optionItem>
+			<optionItem itemImg="http://qnimage.xiteng.com/me_icon_circle@2x.png" mainText="圈子"></optionItem>
+			<optionItem itemImg="http://qnimage.xiteng.com/me_icon_wallet@2x.png" mainText="钱包"></optionItem>
+			<optionItem itemImg="http://qnimage.xiteng.com/me_icon_news@2x.png" mainText="消息"></optionItem>
+			<optionItem itemImg="http://qnimage.xiteng.com/me_icon_set@2x.png" mainText="设置"></optionItem>
 		</view>
 	</view>
 </template>

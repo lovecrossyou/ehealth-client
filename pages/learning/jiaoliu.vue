@@ -84,6 +84,9 @@
 		right: 0;
 		width: 690upx;
 		height: 360upx;
+		
+		padding-top: 30upx;
+		box-sizing: border-box;
 	}
 
 	.list-item {

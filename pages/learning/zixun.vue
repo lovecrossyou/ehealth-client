@@ -51,16 +51,45 @@
 		<view class="nav-title-wrapper">
 			<naviTitle title="推荐机构"></naviTitle>
 			<view class="recommands">
-				<image class="recommand-item-1" src="../../static/learn/zixun/seven.png">
-					<view class="recommand-title">
-						北京康养产业研究院
+				<view class="item-wrapper">
+					<image class="recommand-item-1" src="../../static/learn/zixun/seven.png"></image>
+					<view class="recommand-item-wrapper">
+						<view class="recommand-title">
+							北京康养产业研究院
+						</view>
+						<view class="recommand-desc">
+							咨询项目：294个
+						</view>
 					</view>
-					<view class="recommand-desc">
-						咨询项目：294个
-					</view>
-				</image>
+				</view>
+
+
 				<view class="recommands-row">
-					<image class="recommand-item-2" src="../../static/learn/zixun/eight.png">
+					<view class="item-wrapper">
+					<image class="recommand-item-2" src="../../static/learn/zixun/eight.png"></image>
+					<view class="recommand-item-wrapper">
+						<view class="recommand-title">
+							北京康养产业研究院
+						</view>
+						<view class="recommand-desc">
+							咨询项目：294个
+						</view>
+					</view>
+				</view>
+				
+				<view class="item-wrapper">
+					<image class="recommand-item-3" src="../../static/learn/zixun/nine.png"></image>
+					<view class="recommand-item-wrapper">
+						<view class="recommand-title">
+							北京康养产业研究院
+						</view>
+						<view class="recommand-desc">
+							咨询项目：294个
+						</view>
+					</view>
+				</view>
+					
+					<!-- <image class="recommand-item-2" src="../../static/learn/zixun/eight.png">
 						<view class="recommand-title">
 							泰康康养服务中心
 						</view>
@@ -75,7 +104,9 @@
 						<view class="recommand-desc">
 							咨询项目：294个
 						</view>
-					</image>
+					</image> -->
+					
+					
 				</view>
 			</view>
 		</view>
@@ -103,7 +134,7 @@
 					开始时间：2019年3月10日
 				</view>
 			</view>
-			
+
 			<view class="p-example">
 				<image class="p-example-image"></image>
 				<view class="p-example-title">
@@ -131,8 +162,8 @@
 		padding: 0 20upx 23upx 20upx;
 		background-color: #FFFFFF;
 	}
-	
-	.p-examples{
+
+	.p-examples {
 		padding: 20upx;
 		background: #FFFFFF;
 		margin-bottom: 9upx;
@@ -156,7 +187,7 @@
 		font-weight: 500;
 		color: rgba(51, 51, 51, 1);
 		line-height: 44upx;
-		
+
 		position: absolute;
 		left: 192upx;
 		top: 20px
@@ -199,6 +230,10 @@
 		align-items: center;
 	}
 
+	.item-wrapper {
+		position: relative;
+	}
+
 	.recommand-item-1 {
 		width: 690upx;
 		height: 240upx;
@@ -206,21 +241,30 @@
 		/* background: #0081FF; */
 		margin-left: 10upx;
 
-		position: relative;
+		/* position: relative; */
+	}
+
+	.recommand-item-wrapper {
+		position: absolute;
+		bottom: 30upx;
+		left: 30upx;
+		width: 100%;
+		/* height: 60upx; */
+		/* background-color: #0081FF; */
 	}
 
 	.recommand-title {
-		position: absolute;
+		/* position: absolute;
 		left: 30upx;
-		bottom: 70upx;
+		bottom: 70upx; */
 		color: #FFFFFF;
 		font-size: 30upx;
+		margin-bottom: 10upx;
+
 	}
 
 	.recommand-desc {
-		position: absolute;
-		left: 21upx;
-		bottom: 24upx;
+
 		color: #FFFFFF;
 		font-size: 24upx;
 	}
@@ -228,6 +272,10 @@
 	.recommands-row {
 		display: flex;
 		flex-direction: row;
+		justify-content: space-between;
+		padding: 0 10upx;
+		box-sizing: border-box;
+		margin-top: 10upx;
 	}
 
 	.recommand-item-2 {

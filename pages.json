@@ -9,82 +9,74 @@
 			"path": "pages/moment/moment",
 			"style": {
 				"navigationBarTitleText": "动态"
+				// "navigationBarTextStyle": "white"
+				// "navigationBarBackgroundColor": "#FFFFFF",
 			}
 		}, {
 			"path": "pages/business/business",
 			"style": {
-				"navigationBarTitleText": "企脉",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": {
-						"type": "transparent" //透明渐变导航栏,
-					}
-				}
+				"navigationBarTitleText": "企脉"
+				// "navigationBarTextStyle": "white"
 			}
 		}, {
 			"path": "pages/learning/learning",
 			"style": {
-				"navigationStyle": "custom",
-				"navigationBarTitleText": "学习",
-				"app-plus": {
-					"titleNView": {
-						"type": "transparent" //透明渐变导航栏,
-					}
-				}
+				"navigationBarTitleText": "学习"
+				// "navigationBarTextStyle": "white"
 			}
 		}, {
 			"path": "pages/mine/mine",
 			"style": {
-				"navigationBarTitleText": "我的",
-				"navigationStyle": "custom",
+			  "navigationBarTitleText": "我的",
+			   "navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {
-						"type": "transparent" //透明渐变导航栏,
+						"type": "transparent"
 					}
 				}
 			}
 		}
 	],
 	"tabBar": {
-		"color": "#000000",
-		"selectedColor": "#282828",
+		"color": "#999999",
+		"selectedColor": "#4784FF",
 		"backgroundColor": "#ffffff",
 		"list": [{
 				"pagePath": "pages/index/index",
 				"text": "首页",
 				"iconPath": "static/tab/tab_home.png",
-				"selectedIconPath": "static/tab/tab_home.png"
+				"selectedIconPath": "static/tab/tab_home_s.png"
 			},
 			{
 				"pagePath": "pages/moment/moment",
 				"text": "动态",
 				"iconPath": "static/tab/tab_dynamic.png",
-				"selectedIconPath": "static/tab/tab_dynamic.png"
+				"selectedIconPath": "static/tab/tab_dynamic_s.png"
 			},
 			{
 				"pagePath": "pages/business/business",
 				"text": "企脉",
 				"iconPath": "static/tab/tab_connections.png",
-				"selectedIconPath": "static/tab/tab_connections.png"
+				"selectedIconPath": "static/tab/tab_connections_s.png"
 			},
 			{
 				"pagePath": "pages/learning/learning",
 				"text": "学习",
 				"iconPath": "static/tab/tab_study.png",
-				"selectedIconPath": "static/tab/tab_study.png"
+				"selectedIconPath": "static/tab/tab_study_s.png"
 			},
 			{
 				"pagePath": "pages/mine/mine",
 				"text": "我的",
 				"iconPath": "static/tab/tab_me.png",
-				"selectedIconPath": "static/tab/tab_me.png"
+				"selectedIconPath": "static/tab/tab_me_s.png"
 			}
 		]
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "易康养",
-		"navigationBarBackgroundColor": "#F8F8F8",
+		"navigationBarBackgroundColor": "#FFFFFF",
 		"backgroundColor": "#F8F8F8"
 	}
 }

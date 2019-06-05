@@ -42,7 +42,10 @@
 			<!-- 公司简介 -->
 			<view class="company_profile">
 				<view class="company_top_text">公司简介</view>
-				<hideText></hideText>
+				<view class="company_desc">
+					华为技术有限公司创立于1987年，是全球领先的ICT（信息与通信）基础设施和智能终端提供商，我们致力于把数字世界带入每个人、每个家庭、每个组织，构建万物
+				</view>
+				<!-- <hideText></hideText> -->
 			</view>
 			<!-- 动态 -->
 			<view class="from_industry">
@@ -77,12 +80,12 @@
 
 <script>
 import reportItem from '../index/components/report-item.vue';
-import hideText from './components/hideText.vue';
+// import hideText from './components/hideText.vue';
 import Operation from '@/components/Operation.vue';
 export default {
 	components: {
 		reportItem,
-		hideText,
+		// hideText,
 		Operation
 	},
 	data() {
@@ -273,6 +276,12 @@ export default {
 	color: #333333;
 	font-size: 32upx;
 	font-weight: bold;
+}
+
+.company_desc{
+	margin-top: 15upx;
+	color: #333333;
+	font-size: 30upx;
 }
 .from_industry {
 	width: 100%;

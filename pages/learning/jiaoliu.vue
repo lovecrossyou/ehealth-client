@@ -109,12 +109,14 @@
 
 		/* background-color: #2829DB; */
 		border-radius: 10upx;
+		background-color: #FFFFFF;
+
 	}
 
 	.list-item-bg-tips {
 		position: absolute;
 		left: 0upx;
-		top: 20upx;
+		top: 30upx;
 		width: 87upx;
 		height: 42upx;
 		background: rgba(255, 168, 0, 1);
@@ -147,7 +149,6 @@
 		opacity: 0.8;
 		border-radius: 10px;
 		margin-top: 28upx;
-
 	}
 
 	.list-item-bg-clock {
@@ -166,6 +167,7 @@
 		font-family: PingFangSC-Regular;
 		font-weight: 400;
 		color: rgba(255, 255, 255, 1);
+		background-color: #00000000;
 		/* line-height:44upx; */
 	}
 
@@ -177,6 +179,7 @@
 		color: rgba(51, 51, 51, 1);
 		line-height: 44upx;
 		margin-top: 28upx;
+		background-color: #FFFFFF;
 
 	}
 
@@ -185,6 +188,7 @@
 		flex-direction: row;
 		align-items: center;
 		margin-top: 22upx;
+		background-color: #FFFFFF;
 	}
 
 	.icon_location {
@@ -199,5 +203,6 @@
 		font-weight: 400;
 		color: rgba(153, 153, 153, 1);
 		line-height: 44upx;
+		background-color: #FFFFFF;
 	}
 </style>

@@ -26,23 +26,26 @@
 
 <style>
 	.tab {
+		width: 100%;
 		height: 130upx;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		box-sizing: border-box;
-		background: #FFFFFF;
+		background-color: #fff;
 	}
 
 	.item {
+		height: 130upx;
 		color: #999999;
 		font-size: 38upx;
 		margin-left: 30upx;
-
+		line-height: 130upx;
 	}
 
 	.text-black {
+		height: 130upx;
 		color: #333333;
 		font-size: 60upx;
+		line-height: 130upx;
 	}
 </style>

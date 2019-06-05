@@ -5,42 +5,42 @@
 		</view>
 		<view class="projects">
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/one.png"></image>
 				<view class="project-item-name">
 					康养地产
 				</view>
 			</view>
 
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/two.png"></image>
 				<view class="project-item-name">
 					康养信息化
 				</view>
 			</view>
 
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/three.png"></image>
 				<view class="project-item-name">
 					康养大数据
 				</view>
 			</view>
 
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/four.png"></image>
 				<view class="project-item-name">
 					康养融合
 				</view>
 			</view>
 
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/five.png"></image>
 				<view class="project-item-name">
 					康养生态
 				</view>
 			</view>
 
 			<view class="project-item">
-				<image class="project-item-image"></image>
+				<image class="project-item-image" src="../../static/learn/zixun/six.png"></image>
 				<view class="project-item-name">
 					康养服务
 				</view>
@@ -51,7 +51,7 @@
 		<view class="nav-title-wrapper">
 			<naviTitle title="推荐机构"></naviTitle>
 			<view class="recommands">
-				<image class="recommand-item-1">
+				<image class="recommand-item-1" src="../../static/learn/zixun/seven.png">
 					<view class="recommand-title">
 						北京康养产业研究院
 					</view>
@@ -60,7 +60,7 @@
 					</view>
 				</image>
 				<view class="recommands-row">
-					<image class="recommand-item-2">
+					<image class="recommand-item-2" src="../../static/learn/zixun/eight.png">
 						<view class="recommand-title">
 							泰康康养服务中心
 						</view>
@@ -68,7 +68,7 @@
 							咨询项目：294个
 						</view>
 					</image>
-					<image class="recommand-item-3">
+					<image class="recommand-item-3" src="../../static/learn/zixun/nine.png">
 						<view class="recommand-title">
 							国家检测中心
 						</view>
@@ -187,7 +187,7 @@
 		width: 216upx;
 		height: 130upx;
 
-		background: rgba(12, 17, 35, 1);
+		/* background: rgba(12, 17, 35, 1); */
 		opacity: 0.64;
 		border-radius: 10upx;
 		margin-bottom: 25upx;
@@ -203,7 +203,7 @@
 		width: 690upx;
 		height: 240upx;
 		border-radius: 10upx;
-		background: #0081FF;
+		/* background: #0081FF; */
 		margin-left: 10upx;
 
 		position: relative;
@@ -234,7 +234,7 @@
 		width: 335upx;
 		height: 200upx;
 		border-radius: 10upx;
-		background: #0081FF;
+		/* background: #0081FF; */
 		margin: auto;
 		position: relative;
 	}
@@ -243,7 +243,7 @@
 		width: 335upx;
 		height: 200upx;
 		border-radius: 10upx;
-		background: #0081FF;
+		/* background: #0081FF; */
 		margin: auto;
 		position: relative;
 	}
@@ -252,8 +252,8 @@
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 0;
-		bottom: 0;
+		width: 216upx;
+		height: 130upx;
 	}
 
 	.project-item-name {

@@ -3,6 +3,7 @@
 		<div class="list">
 			<div class="list-item">
 				<div class="list-item-bg">
+					<image src="http://qnimage.xiteng.com/tu.png" class="bg-image" mode="scaleToFill"></image>
 					<div class="list-item-bg-tips">可报名</div>
 					<image src="../../static/learn/icon_time.png" class="list-item-bg-clock"></image>
 					<div class="time">
@@ -20,8 +21,10 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="list-item">
 				<div class="list-item-bg">
+					<image src="http://qnimage.xiteng.com/tu.png" class="bg-image" mode="scaleToFill"></image>
 					<div class="list-item-bg-tips">可报名</div>
 					<image src="../../static/learn/icon_time.png" class="list-item-bg-clock"></image>
 					<div class="time">
@@ -39,8 +42,10 @@
 					</div>
 				</div>
 			</div>
+			
 			<div class="list-item">
 				<div class="list-item-bg">
+					<image src="http://qnimage.xiteng.com/tu.png" class="bg-image" mode="scaleToFill"></image>
 					<div class="list-item-bg-tips">可报名</div>
 					<image src="../../static/learn/icon_time.png" class="list-item-bg-clock"></image>
 					<div class="time">
@@ -72,6 +77,14 @@
 	.container {
 		margin: auto;
 	}
+	
+	.bg-image{
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 690upx;
+		height: 360upx;
+	}
 
 	.list-item {
 		padding:  0  30upx 34upx 30upx;
@@ -91,7 +104,7 @@
 		justify-content: center;
 		align-items: center; */
 
-		background-color: #2829DB;
+		/* background-color: #2829DB; */
 		border-radius: 10upx;
 	}
 

@@ -7,7 +7,16 @@
 			</image>
 			<!-- 加入培训计划 -->
 			<view class="jihua">
-
+				<image class="jihua-logo" src="http://qnimage.xiteng.com/11111.jpg" mode="aspectFill"></image>
+				<view class="jihua-title">
+					加入产业培训提升计划
+				</view>
+				<view class="jihua-desc">
+					根据需求跟踪行业最新的培训课程
+				</view>
+				<view class="jihua-join">
+					立即加入
+				</view>
 			</view>
 			<!-- 专家团队 -->
 			<view class="nav-title-wrapper">
@@ -243,6 +252,49 @@
 		background: rgba(255, 255, 255, 1);
 		box-shadow: 0upx -1upx 18upx 0upx rgba(34, 32, 182, 0.12);
 		border-radius: 10upx;
+		
+		position: relative;
+	}
+	
+	.jihua-logo{
+		width: 120upx;
+		height: 90upx;
+		
+		position: absolute;
+		left: 20upx;
+		top: 70upx;
+	}
+	
+	.jihua-title{
+		color: #333333;
+		font-size: 32upx;
+		position: absolute;
+		left: 215upx;
+		top: 50upx;
+	}
+	
+	.jihua-desc{
+		color: #999999;
+		font-size: 26upx;
+		position: absolute;
+		left: 215upx;
+		top: 90upx;
+	}
+	
+	.jihua-join{
+		color: #FFFFFF;
+		font-size: 26upx;
+		position: absolute;
+		left: 219upx;
+		bottom: 41upx;
+		background: #476AFF;
+		border-radius: 6upx;
+		
+		width: 140upx;
+		height: 50upx;
+		line-height: 50upx;
+		text-align: center;
+		
 	}
 
 	.nav-title-wrapper {

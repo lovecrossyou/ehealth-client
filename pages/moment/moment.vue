@@ -83,12 +83,31 @@
 		<view class="from_industry">
 			<view class="top_title">推广</view>
 			<view class="publisher_info">
+				<image src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1894992214,3473101703&fm=58&s=9095187A4F45B20B49AA4BB70300C02D&bpow=121&bpoh=75" 
+					mode="aspectFill" 
+					class="publisher_header_img"
+					@click="goCompanyDetails">
+				</image>
+				<view class="publisher_presentation" @click="goCompanyDetails">
+					<view class="publisher_name">华为</view>
+				</view>
+				<view class="attention_btn">+ 关 注</view>
+			</view>
+			<view class="publish_text">凭借强大的研发实力和优秀的产品体验，过去一年华为手机已经完成了2亿部的出货目标，余承东此前曾表示，2019年华为手机的出货目标为2.5亿部，2020年要达到3亿部。而今年华为消费者业务也有望首次超越运营商、成为华为第一大核心业务。</view>
+			<view class="publish_image">
+				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222326kz1xbavj9lwusnwj.jpg" mode="aspectFill"></image>
+				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222559nohzeyh1f3mvbtef.jpg" mode="aspectFill"></image>
+				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222733fflvdln16j2iohd7.jpg" mode="aspectFill"></image>
+			</view>
+			<!-- 点赞 & 转发 & 评论 -->
+			<Operation transpondNum='123' commentNum='22' likeNum="22"></Operation>
+			<view class="publisher_info">
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3035998294,2703805772&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">雷军</view>
 					<view class="publisher_corporation">小米科技有限公司</view>
 				</view>
-				<view class="attention_btn">+ 关注</view>
+				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
 			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
 			<view class="publish_image">
@@ -139,7 +158,8 @@ export default {
 					financingGoal:'450',
 					stockNum:'13'
 				},
-			]
+			],
+			isAttention: false,
 			
 		};
 	},
@@ -151,6 +171,11 @@ export default {
 	methods: {
 		giveAttention(index){
 			this.organizationList[index].isAttention = !this.organizationList[index].isAttention;
+		},
+		goCompanyDetails(){
+			uni.navigateTo({
+				url:'../companyDetails/companyDetails'
+			})
 		}
 	}
 };
@@ -238,7 +263,8 @@ export default {
 	padding: 29upx 31upx;
 	box-sizing: border-box;
 	display: flex;
-	flex-direction: row;
+	
+	align-items: center;
 }
 .publisher_header_img {
 	width: 74upx;

@@ -1,7 +1,7 @@
 <template>
 	<view class="wrapper">
 		<!-- 个人简介 -->
-		<view class="header_area">
+		<view class="header_area" @click="goCompanyDetails">
 			<view class="user_basic_info">
 				<image src="http://img3.imgtn.bdimg.com/it/u=3519436443,202544646&fm=26&gp=0.jpg" mode="aspectFill" class="header_img"></image>
 				<view class="center_cont">
@@ -38,7 +38,13 @@ export default {
 	data() {
 		return {};
 	},
-	methods: {},
+	methods: {
+		goCompanyDetails(){
+			uni.navigateTo({
+				url:'../companyDetails/companyDetails'
+			})
+		}
+	},
 	components:{
 		optionItem
 	}

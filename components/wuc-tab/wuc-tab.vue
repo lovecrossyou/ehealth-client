@@ -119,6 +119,7 @@ swiper {
 }
 .bg-white{
     background-color: #ffffff;
+	font-size: 30upx;
 }
 .bg-blue{
     background-color: #0081ff;

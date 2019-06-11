@@ -2,8 +2,8 @@
 	<view class="wrapper">
 		<!-- 头部背景图 -->
 		<view class="top_bg_img">
-			<image src="http://qnimage.xiteng.com/arrow_back@2x.png" class="back_icon" @click="backPage"></image>
-			<image src="http://qnimage.xiteng.com/share@2x.png" class="share_icon"></image>
+			<!-- <image src="http://qnimage.xiteng.com/arrow_back@2x.png" class="back_icon" @click="backPage"></image> -->
+			<!-- <image src="http://qnimage.xiteng.com/share@2x.png" class="share_icon"></image> -->
 		</view>
 		<!-- 公司基本信息 -->
 		<view class="company_basic_info">
@@ -23,7 +23,7 @@
 			<view class="explain_text">ICT（信息与通信）基础设施和智能终端提供商</view>
 		</view>
 		<!-- tab导航 -->
-		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2" tab-class="text-center text-black bg-white" select-class="text-blue"></wuc-tab>
+		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2" tab-class="text-center bg-white"></wuc-tab>
 		<!-- 公司简介 -->
 		<view class="company_profile">
 			<view class="company_profile_title">公司简介</view>
@@ -203,22 +203,21 @@ export default {
 }
 .text-center {
 	text-align: center;
-}
-.text-black {
-	color: #666666;
 	font-size: 30upx;
 }
 .text-black {
 	color: #666666;
+	font-size: 26upx;
 	font-size: 30upx;
 }
+
 .item-group {
 	width: 100%;
 	background-color: #ffffff;
 }
 .text-blue {
 	color: #5871fe;
-	font-size: 30upx;
+	font-size: 26upx;
 }
 .company_profile {
 	width: 100%;
@@ -228,7 +227,7 @@ export default {
 	background-color: #fff;
 }
 .company_profile_title {
-	font-size: 28upx;
+	font-size: 34upx;
 	color: #282828;
 	font-weight: bold;
 }

@@ -71,6 +71,7 @@
 	/* @import "~@/styles/icon.scss"; */
 	.main {
 		width: 100%;
+		overflow: hidden;
 	}
 
 	div,

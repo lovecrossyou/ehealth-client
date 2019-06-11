@@ -117,7 +117,7 @@
 
 		<view class="p-examples">
 			<view class="p-example">
-				<image class="p-example-image"></image>
+				<image class="p-example-image" src="http://qnimage.xiteng.com/65505a8eb68a282667e2781b22aea48e.jpg" mode="aspectFill"></image>
 				<view class="p-example-title">
 					第四届中国康养高峰论坛承办
 				</view>
@@ -126,7 +126,7 @@
 				</view>
 			</view>
 			<view class="p-example">
-				<image class="p-example-image"></image>
+				<image class="p-example-image" src="http://qnimage.xiteng.com/4888f2d97440b54ae32fb164815e4a0f.jpeg" mode="aspectFill"></image>
 				<view class="p-example-title">
 					第四届中国康养高峰论坛承办
 				</view>
@@ -136,7 +136,7 @@
 			</view>
 
 			<view class="p-example">
-				<image class="p-example-image"></image>
+				<image class="p-example-image" src="http://qnimage.xiteng.com/a9336c4c461eab7a18a8585e7f5e4878.jpg" mode="aspectFill"></image>
 				<view class="p-example-title">
 					第四届中国康养高峰论坛承办
 				</view>
@@ -177,7 +177,7 @@
 		width: 160upx;
 		height: 160upx;
 		border-radius: 10upx;
-		background-color: #0081FF;
+		/* background-color: #0081FF; */
 	}
 
 	.p-example-title {

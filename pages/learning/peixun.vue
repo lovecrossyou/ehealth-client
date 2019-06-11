@@ -1,7 +1,6 @@
 <template>
 	<div class="main">
-		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2" tab-class="text-center text-black bg-white"
-		 select-class="text-blue text-xl"></wuc-tab>
+		<wuc-tab :tab-list="tabList2" :tabCur="TabCur2" @change="tabChange2"></wuc-tab>
 		<view class="item-group">
 			<image :src="banner" class="banner" mode="aspectFill">
 
@@ -16,7 +15,7 @@
 			</view>
 			<view class="zhuanjia">
 				<view class="zhuanjia-item">
-					<image :src="avatar" class="avatar"></image>
+					<image :src="avatar" class="avatar" mode="aspectFill"></image>
 					<view class="zhuanjia-title">
 						康养学会
 					</view>
@@ -28,7 +27,7 @@
 					</view>
 				</view>
 				<view class="zhuanjia-item">
-					<image :src="avatar" class="avatar"></image>
+					<image :src="avatar" class="avatar" mode="aspectFill"></image>
 					<view class="zhuanjia-title">
 						康养学会
 					</view>
@@ -40,7 +39,7 @@
 					</view>
 				</view>
 				<view class="zhuanjia-item">
-					<image :src="avatar" class="avatar"></image>
+					<image :src="avatar" class="avatar" mode="aspectFill"></image>
 					<view class="zhuanjia-title">
 						康养学会
 					</view>
@@ -56,7 +55,7 @@
 			<!-- 列表 -->
 			<view class="list">
 				<view class="list-item">
-					<image :src="avatar" class="list-item-image">
+					<image :src="avatar" class="list-item-image" mode="aspectFill">
 						<view class="list-item-tips">限时特惠</view>
 					</image>
 					<view class="list-item-name">
@@ -67,7 +66,7 @@
 					</view>
 				</view>
 				<view class="list-item">
-					<image :src="avatar" class="list-item-image">
+					<image :src="avatar" class="list-item-image" mode="aspectFill">
 						<view class="list-item-tips">限时特惠</view>
 					</image>
 					<view class="list-item-name">
@@ -78,7 +77,7 @@
 					</view>
 				</view>
 				<view class="list-item">
-					<image :src="avatar" class="list-item-image">
+					<image :src="avatar" class="list-item-image" mode="aspectFill">
 						<view class="list-item-tips">限时特惠</view>
 					</image>
 					<view class="list-item-name">
@@ -192,7 +191,7 @@
 		width: 114upx;
 		height: 39upx;
 		background: rgba(235, 46, 46, 1);
-
+		color: #FFFFFF;
 		position: absolute;
 		left: 14upx;
 		top: 16upx;

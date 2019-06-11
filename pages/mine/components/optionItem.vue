@@ -2,7 +2,7 @@
 	<view class="wrapper">
 		<image :src="itemImg" mode="" class="item_img"></image>
 		<view class="main_text">{{mainText}}</view>
-		<image src="../../static/mine/icon_arrow_right@2x.png" class="next_img"></image>
+		<image src="http://qnimage.xiteng.com/arrow_white@2x.png" class="next_img"></image>
 	</view>
 </template>
 

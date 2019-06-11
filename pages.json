@@ -8,14 +8,14 @@
 		}, {
 			"path": "pages/moment/moment",
 			"style": {
-				"navigationBarTitleText": "动态"
+				"navigationBarTitleText": "广场"
 				// "navigationBarTextStyle": "white"
 				// "navigationBarBackgroundColor": "#FFFFFF",
 			}
 		}, {
 			"path": "pages/business/business",
 			"style": {
-				"navigationBarTitleText": "企脉"
+				"navigationBarTitleText": "人脉"
 				// "navigationBarTextStyle": "white"
 			}
 		}, {
@@ -49,19 +49,19 @@
 			},
 			{
 				"pagePath": "pages/moment/moment",
-				"text": "动态",
+				"text": "广场",
 				"iconPath": "static/tab/tab_dynamic.png",
 				"selectedIconPath": "static/tab/tab_dynamic_s.png"
 			},
 			{
 				"pagePath": "pages/business/business",
-				"text": "企脉",
+				"text": "人脉",
 				"iconPath": "static/tab/tab_connections.png",
 				"selectedIconPath": "static/tab/tab_connections_s.png"
 			},
 			{
 				"pagePath": "pages/learning/learning",
-				"text": "学习",
+				"text": "服务",
 				"iconPath": "static/tab/tab_study.png",
 				"selectedIconPath": "static/tab/tab_study_s.png"
 			},

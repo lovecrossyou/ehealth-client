@@ -35,6 +35,17 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/companyDetails/companyDetails",
+			"style": {
+			  "navigationBarTitleText": "公司简介",
+			   "navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
 		}
 	],
 	"tabBar": {

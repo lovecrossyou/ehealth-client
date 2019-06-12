@@ -1,21 +1,24 @@
 <template>
 	<view class="wrapper">
 		<!-- 头部 -->
-		<view class="top_area">
-			<view class="dynamic_title">动态</view>
-			<view class="right_publish">
-				<image src="http://qnimage.xiteng.com/btn_add@2x.png" class="publish_img"></image>
-				<view>发布</view>
+		<view class="position_fixed">
+			<view class="top_area">
+				<view class="dynamic_title">动态</view>
+				<view class="right_publish">
+					<image src="http://qnimage.xiteng.com/btn_add@2x.png" class="publish_img"></image>
+					<view>发布</view>
+				</view>
+			</view>
+			<view class="search_wrapper">
+				<view class="search_area">
+					<image src="http://qnimage.xiteng.com/icon_search@2x.png" mode="" class="search_icon"></image>
+					<input type="text" value="" placeholder="搜索行业动态" class="search_input"/>
+				</view>
 			</view>
 		</view>
-		<view class="search_wrapper">
-			<view class="search_area">
-				<image src="http://qnimage.xiteng.com/icon_search@2x.png" mode="" class="search_icon"></image>
-				<input type="text" value="" placeholder="搜索行业动态" class="search_input"/>
-			</view>
-		</view>
+		
 		<!-- 来自你的产业朋友 -->
-		<view class="from_industry">
+		<view class="from_industry margin_top">
 			<view class="top_title">来自你的产业朋友</view>
 			<view class="publisher_info">
 				<image src="http://img2.imgtn.bdimg.com/it/u=1961142815,2698003411&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
@@ -391,5 +394,17 @@ export default {
 	color: #777;
 	font-size: 24upx;	
 	margin-top: 5upx;
+}
+.position_fixed{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	z-index: 99;
+	margin-top: 50upx;
+}
+.margin_top{
+	margin-top: 240upx;
 }
 </style>

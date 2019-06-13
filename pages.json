@@ -46,6 +46,17 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/companyDetails/wenhua",
+			"style": {
+			  "navigationBarTitleText": "wenhua",
+			   "navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
 		}
 	],
 	"tabBar": {

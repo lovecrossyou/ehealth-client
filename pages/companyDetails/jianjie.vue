@@ -73,7 +73,6 @@
 	}
 	.company_profile {
 		width: 100%;
-		margin-top: 20upx;
 		padding: 50upx 33upx 0 33upx;
 		box-sizing: border-box;
 		background-color: #fff;

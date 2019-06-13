@@ -26,11 +26,11 @@
 		<view class="nav_tab_wrapper">
 			<navTab @change="tabChange"></navTab>
 			<block v-if="TabCur === 0">
-				<view class="item-group">
-					<jianjie></jianjie>
-				</view>
+				<view class="item-group"><jianjie></jianjie></view>
 			</block>
-			<block v-if="TabCur === 1"><view class="item-group">22</view></block>
+			<block v-if="TabCur === 1">
+				<view class="item-group"><wenhua></wenhua></view>
+			</block>
 			<block v-if="TabCur === 2"><view class="item-group">333</view></block>
 		</view>
 	</view>
@@ -38,7 +38,8 @@
 
 <script>
 import navTab from '@/components/navTab.vue';
-import jianjie from './jianjie.vue'
+import jianjie from './jianjie.vue';
+import wenhua from './wenhua.vue';
 export default {
 	data() {
 		return {
@@ -59,7 +60,8 @@ export default {
 	},
 	components: {
 		navTab,
-		jianjie
+		jianjie,
+		wenhua
 	}
 };
 </script>
@@ -144,7 +146,6 @@ export default {
 .nav_tab_wrapper {
 	width: 100%;
 	overflow: hidden;
-	
 }
 .bg-white {
 	background-color: #ffffff;
@@ -153,5 +154,4 @@ export default {
 	width: 100%;
 	background-color: #ffffff;
 }
-
 </style>

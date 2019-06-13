@@ -70,6 +70,8 @@ body {
 	width: calc(100% - 16px);
 	background-color: #fff;
 	margin: 0 auto;
+	padding-top: 20upx;
+	box-sizing: border-box;
 }
 .yg img {
 	width: 100%;

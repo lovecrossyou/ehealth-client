@@ -1,19 +1,18 @@
 <!--模板-->
 <template>
 	<view id="bbb">
-		<view id="vm" class="pubu" v-cloak>
+		<view id="vm" class="pubu">
 			<ul id="show" class="yg yg_l">
 				<li v-for="(item, index) in ListData" :key="index" v-if="index % 2 == 0">
-					<view style="position: relative"><img :src="item.e_img" alt="" /></view>
+					<view style="position: relative"><img :src="item.e_img" alt="" mode="widthFix"/></view>
 				</li>
 			</ul>
 			<ul class="yg yg_r">
 				<li v-for="(item, index) in ListData" :key="index" v-if="index % 2 == 1">
-					<view style="position: relative"><img :src="item.e_img" alt="" /></view>
+					<view style="position: relative"><img :src="item.e_img" alt=""  mode="widthFix"/></view>
 				</li>
 			</ul>
 			<view style="clear: both;"></view>
-			111
 		</view>
 	</view>
 	
@@ -23,8 +22,7 @@
 export default {
 	data() {
 		return {
-			ListData: [],
-			imgList: [
+			ListData: [
 				{
 					e_img: 'http://img4.imgtn.bdimg.com/it/u=1269541597,1719556527&fm=26&gp=0.jpg'
 				},
@@ -47,13 +45,10 @@ export default {
 		};
 	},
 	methods: {
-		getList: function() {
-			//imgList API返回的参数
-			this.ListData = this.imgList;
-		}
+	
 	},
 	onLoad() {
-		this.getList();
+		// this.getList();
 	}
 };
 </script>
@@ -73,7 +68,7 @@ body {
 }
 .pubu {
 	width: calc(100% - 16px);
-	background-color: pink;
+	background-color: #fff;
 	margin: 0 auto;
 }
 .yg img {

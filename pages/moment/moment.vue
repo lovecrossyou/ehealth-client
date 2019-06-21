@@ -12,11 +12,11 @@
 			<view class="search_wrapper">
 				<view class="search_area">
 					<image src="http://qnimage.xiteng.com/icon_search@2x.png" mode="" class="search_icon"></image>
-					<input type="text" value="" placeholder="搜索行业动态" class="search_input"/>
+					<input type="text" value="" placeholder="搜索行业动态" class="search_input" />
 				</view>
 			</view>
 		</view>
-		
+
 		<!-- 来自你的产业朋友 -->
 		<view class="from_industry margin_top">
 			<view class="top_title">来自你的产业朋友</view>
@@ -28,9 +28,11 @@
 				</view>
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
+			<view class="publish_text">
+				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
+			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<Operation transpondNum='51' commentNum='785' likeNum="88"></Operation>
+			<Operation transpondNum="51" commentNum="785" likeNum="88"></Operation>
 		</view>
 		<!-- 来自你的投资人朋友 -->
 		<view class="from_industry">
@@ -44,14 +46,16 @@
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
 			<!-- 文字展开隐藏 -->
-			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
+			<view class="publish_text">
+				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
+			</view>
 			<view class="publish_image">
 				<image src="http://img2.imgtn.bdimg.com/it/u=334514814,3940243718&fm=26&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=457503980,2486741247&fm=11&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=4291489099,2387855543&fm=26&gp=0.jpg" mode="aspectFill"></image>
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<Operation transpondNum='555' commentNum='625' likeNum="85"></Operation>
+			<Operation transpondNum="555" commentNum="625" likeNum="85"></Operation>
 		</view>
 		<!-- 来自产业机构 -->
 		<view class="from_industry">
@@ -75,9 +79,9 @@
 				<view class="innovate_area">
 					<image :src="item.img" mode="aspectFill" class="sleep_img"></image>
 					<view class="right_project_detail">
-						<view class="project_name">{{item.name}}</view>
-						<view class="financing_goal">融资目标：{{item.financingGoal}}万</view>
-						<view class="stock_num">出让股份：{{item.stockNum}}%</view>
+						<view class="project_name">{{ item.name }}</view>
+						<view class="financing_goal">融资目标：{{ item.financingGoal }}万</view>
+						<view class="stock_num">出让股份：{{ item.stockNum }}%</view>
 					</view>
 				</view>
 			</block>
@@ -86,24 +90,25 @@
 		<view class="from_industry">
 			<view class="top_title">推广</view>
 			<view class="publisher_info">
-				<image src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1894992214,3473101703&fm=58&s=9095187A4F45B20B49AA4BB70300C02D&bpow=121&bpoh=75" 
-					mode="aspectFill" 
+				<image
+					src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1894992214,3473101703&fm=58&s=9095187A4F45B20B49AA4BB70300C02D&bpow=121&bpoh=75"
+					mode="aspectFill"
 					class="publisher_header_img"
-					@click="goCompanyDetails">
-				</image>
-				<view class="publisher_presentation" @click="goCompanyDetails">
-					<view class="publisher_name">华为</view>
-				</view>
+					@click="goCompanyDetails"
+				></image>
+				<view class="publisher_presentation" @click="goCompanyDetails"><view class="publisher_name">华为</view></view>
 				<view class="attention_btn">+ 关 注</view>
 			</view>
-			<view class="publish_text">凭借强大的研发实力和优秀的产品体验，过去一年华为手机已经完成了2亿部的出货目标，余承东此前曾表示，2019年华为手机的出货目标为2.5亿部，2020年要达到3亿部。而今年华为消费者业务也有望首次超越运营商、成为华为第一大核心业务。</view>
+			<view class="publish_text">
+				凭借强大的研发实力和优秀的产品体验，过去一年华为手机已经完成了2亿部的出货目标，余承东此前曾表示，2019年华为手机的出货目标为2.5亿部，2020年要达到3亿部。而今年华为消费者业务也有望首次超越运营商、成为华为第一大核心业务。
+			</view>
 			<view class="publish_image">
 				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222326kz1xbavj9lwusnwj.jpg" mode="aspectFill"></image>
 				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222559nohzeyh1f3mvbtef.jpg" mode="aspectFill"></image>
 				<image src="https://clubimg.club.vmall.com/data/attachment/forum/201902/05/222733fflvdln16j2iohd7.jpg" mode="aspectFill"></image>
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<Operation transpondNum='123' commentNum='22' likeNum="22"></Operation>
+			<Operation transpondNum="123" commentNum="22" likeNum="22"></Operation>
 			<view class="publisher_info">
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3035998294,2703805772&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
@@ -112,19 +117,21 @@
 				</view>
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
+			<view class="publish_text">
+				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
+			</view>
 			<view class="publish_image">
 				<image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1205485994,167777535&fm=26&gp=0.jpg" mode="aspectFill"></image>
 				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2103092801,962345008&fm=26&gp=0.jpg" mode="aspectFill"></image>
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
-			<Operation transpondNum='123' commentNum='22' likeNum="22"></Operation>
+			<Operation transpondNum="123" commentNum="22" likeNum="22"></Operation>
 		</view>
 	</view>
 </template>
 <script>
 import hideText from './components/hideText.vue';
-import Operation from '@/components/Operation.vue'
+import Operation from '@/components/Operation.vue';
 export default {
 	data() {
 		return {
@@ -148,37 +155,36 @@ export default {
 					img: 'http://img4.imgtn.bdimg.com/it/u=1593262122,2201972416&fm=26&gp=0.jpg'
 				}
 			],
-			innovateList:[
+			innovateList: [
 				{
 					name: '老年康养睡眠设备',
 					img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2349968693,3858415515&fm=26&gp=0.jpg',
-					financingGoal:'300',
-					stockNum:'10'
+					financingGoal: '300',
+					stockNum: '10'
 				},
 				{
 					name: '中老年康养养生基地',
 					img: 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1589614470,1882171006&fm=26&gp=0.jpg',
-					financingGoal:'450',
-					stockNum:'13'
-				},
+					financingGoal: '450',
+					stockNum: '13'
+				}
 			],
-			isAttention: false,
-			
+			isAttention: false
 		};
 	},
 	components: {
 		hideText,
-		Operation	
+		Operation
 	},
 	computed: {},
 	methods: {
-		giveAttention(index){
+		giveAttention(index) {
 			this.organizationList[index].isAttention = !this.organizationList[index].isAttention;
 		},
-		goCompanyDetails(){
+		goCompanyDetails() {
 			uni.navigateTo({
-				url:'../companyDetails/companyDetails'
-			})
+				url: '../companyDetails/companyDetails'
+			});
 		}
 	}
 };
@@ -225,25 +231,25 @@ export default {
 	padding: 15upx 30upx 0 30upx;
 	box-sizing: border-box;
 }
-.search_area{
+.search_area {
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	background-color: #F5F4F4;
+	background-color: #f5f4f4;
 	height: 75upx;
 	padding: 0 31upx;
 	box-sizing: border-box;
 }
-.search_icon{
+.search_icon {
 	width: 31upx;
 	height: 31upx;
 	margin-right: 13upx;
 }
-.search_input{
+.search_input {
 	flex: 1;
 	height: 31upx;
-	background-color: #F5F4F4;
+	background-color: #f5f4f4;
 }
 
 .from_industry {
@@ -266,7 +272,7 @@ export default {
 	padding: 29upx 31upx;
 	box-sizing: border-box;
 	display: flex;
-	
+
 	align-items: center;
 }
 .publisher_header_img {
@@ -362,7 +368,7 @@ export default {
 	text-align: center;
 	line-height: 44upx;
 }
-.innovate_area{
+.innovate_area {
 	width: 100%;
 	padding: 30upx;
 	box-sizing: border-box;
@@ -370,41 +376,41 @@ export default {
 	flex-direction: row;
 	background-color: #fff;
 }
-.sleep_img{
+.sleep_img {
 	width: 140upx;
 	height: 140upx;
 }
-.right_project_detail{
+.right_project_detail {
 	flex: 1;
-	margin:5upx 0 0 25upx;
+	margin: 5upx 0 0 25upx;
 	display: flex;
 	flex-direction: column;
 }
-.project_name{
+.project_name {
 	color: #333333;
 	font-size: 30upx;
 	font-weight: bold;
 }
-.financing_goal{
+.financing_goal {
 	color: #777;
 	font-size: 24upx;
 	margin-top: 30upx;
 }
-.stock_num{
+.stock_num {
 	color: #777;
-	font-size: 24upx;	
+	font-size: 24upx;
 	margin-top: 5upx;
 }
-.position_fixed{
+.position_fixed {
 	width: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	background-color: #fff;
 	z-index: 99;
-	margin-top: 50upx;
+	/* margin-top: 50upx; */
 }
-.margin_top{
-	margin-top: 240upx;
+.margin_top {
+	margin-top: 280upx;
 }
 </style>

@@ -8,9 +8,13 @@
 		}, {
 			"path": "pages/moment/moment",
 			"style": {
-				"navigationBarTitleText": "广场"
-				// "navigationBarTextStyle": "white"
-				// "navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTitleText": "广场",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/business/business",
@@ -27,8 +31,8 @@
 		}, {
 			"path": "pages/mine/mine",
 			"style": {
-			  "navigationBarTitleText": "我的",
-			   "navigationStyle": "custom",
+				"navigationBarTitleText": "我的",
+				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -38,8 +42,8 @@
 		}, {
 			"path": "pages/companyDetails/companyDetails",
 			"style": {
-			  "navigationBarTitleText": "公司简介",
-			   "navigationStyle": "custom",
+				"navigationBarTitleText": "公司简介",
+				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
@@ -49,13 +53,18 @@
 		}, {
 			"path": "pages/companyDetails/wenhua",
 			"style": {
-			  "navigationBarTitleText": "wenhua",
-			   "navigationStyle": "custom",
+				"navigationBarTitleText": "wenhua",
+				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {
 						"type": "transparent"
 					}
 				}
+			}
+		}, {
+			"path": "pages/moment/momentDetails",
+			"style": {
+				"navigationBarTitleText": "动态详情"
 			}
 		}
 	],

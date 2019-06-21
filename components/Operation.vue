@@ -4,7 +4,7 @@
 			<view class="operation_icon"><image src="http://qnimage.xiteng.com/btn_share@2x.png" mode="aspectFill"></image></view>
 			<view class="operation_num">{{ transpondNum }}</view>
 		</view>
-		<view class="bottom_operation">
+		<view class="bottom_operation" @click="goMomentDetails">
 			<view class="operation_icon"><image src="http://qnimage.xiteng.com/btn_comment@2x.png" mode="aspectFill"></image></view>
 			<view class="operation_num">{{ commentNum }}</view>
 		</view>
@@ -26,7 +26,13 @@ export default {
 		commentNum: String,
 		likeNum: String
 	},
-	methods: {}
+	methods: {
+		goMomentDetails() {
+			uni.navigateTo({
+				url: '/pages/moment/momentDetails'
+			});
+		}
+	}
 };
 </script>
 

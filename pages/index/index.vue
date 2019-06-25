@@ -158,15 +158,12 @@
 	var Data={
 			"LineA": {
 			  "categories": ["2012", "2013", "2014", "2015", "2016", "2017"],
-			  "series": [{
-				"name": "成交量A",
-				"data": [35, 8, 25, 37, 4, 20]
-			  }, {
+			  "series": [ {
 				"name": "成交量B",
-				"data": [70, 40, 65, 100, 44, 68]
+				"data": [70,112,90, 78, 100, 120, 68]
 			  }, {
 				"name": "成交量C",
-				"data": [100, 80, 95, 150, 112, 132]
+				"data": [100, 80, 95, 150, 132, 68]
 			  }]
 			}
 		}
@@ -217,6 +214,9 @@
 			this.getServerData();
 		},
 		methods: {
+			touchLineA(){
+				
+			},
 			getServerData(){
 				_self.serverData=Data;
 				let LineA={categories:[],series:[]};
@@ -251,7 +251,7 @@
 						dashLength:8,
 						splitNumber:5,
 						min:10,
-						max:180,
+						max:90,
 						format:(val)=>{return val.toFixed(0)+'元'}
 					},
 					width: _self.cWidth*_self.pixelRatio,
@@ -761,14 +761,14 @@
 	/* 通用样式 */
 	.qiun-charts {
 		width: 100%;
-		height: 500upx;
+		/* height: 300upx; */
 		background-color: #FFFFFF;
 		overflow: hidden;
 	}
 
 	.charts {
 		width: 100%;
-		height: 500upx;
+		height: 300upx;
 		background-color: #FFFFFF;
 		overflow: hidden;
 	}
@@ -776,14 +776,14 @@
 	/* 横屏样式 */
 	.qiun-charts-rotate {
 		width: 700upx;
-		height: 1100upx;
+		height: 300upx;
 		background-color: #FFFFFF;
 		padding: 25upx;
 	}
 
 	.charts-rotate {
 		width: 700upx;
-		height: 1100upx;
+		height: 500upx;
 		background-color: #FFFFFF;
 	}
 

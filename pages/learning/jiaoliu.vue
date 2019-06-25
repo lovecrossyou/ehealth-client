@@ -116,7 +116,7 @@
 	.list-item-bg-tips {
 		position: absolute;
 		left: 0upx;
-		top: 30upx;
+		top: 40upx;
 		width: 87upx;
 		height: 42upx;
 		background: rgba(255, 168, 0, 1);
@@ -130,8 +130,8 @@
 
 	.list-item-bg-button {
 		position: absolute;
-		right: 0upx;
-		bottom: 20upx;
+		right: 25upx;
+		bottom: 22upx;
 		width: 140upx;
 		height: 50upx;
 		background: rgba(255, 168, 0, 1);
@@ -167,7 +167,7 @@
 		font-family: PingFangSC-Regular;
 		font-weight: 400;
 		color: rgba(255, 255, 255, 1);
-		background-color: #00000000;
+		/* background-color: #000000; */
 		/* line-height:44upx; */
 	}
 

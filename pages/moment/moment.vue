@@ -403,7 +403,7 @@ export default {
 }
 .position_fixed {
 	width: 100%;
-	position: fixed;
+	/* position: fixed; */
 	top: 0;
 	left: 0;
 	background-color: #fff;
@@ -411,6 +411,6 @@ export default {
 	/* margin-top: 50upx; */
 }
 .margin_top {
-	margin-top: 280upx;
+	/* margin-top: 280upx; */
 }
 </style>

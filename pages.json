@@ -8,13 +8,13 @@
 		}, {
 			"path": "pages/moment/moment",
 			"style": {
-				"navigationBarTitleText": "广场",
-				"navigationStyle": "custom",
-				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
-				}
+				"navigationBarTitleText": "广场"
+				// "navigationStyle": "custom",
+				// "app-plus": {
+				// 	"titleNView": {
+				// 		"type": "transparent"
+				// 	}
+				// }
 			}
 		}, {
 			"path": "pages/business/business",

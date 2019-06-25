@@ -76,6 +76,17 @@
 			"style": {
 				"navigationBarTitleText": "问答详情"
 			}
+		}, {
+			"path": "pages/index/topicDetails",
+			"style": {
+				"navigationBarTitleText": "话题",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
 		}
 	],
 	"tabBar": {

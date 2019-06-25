@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<!-- 讨论列表 -->
-		<view class="main">
+		<view class="main" @click="goTopicDetails">
 			<swiper class="swiper-tall" :indicator-dots="indicatorDots" :autoplay="autoplay" :previous-margin="previousMargin"
 			 :next-margin="nextMargin" :circular="circular" @change="change" :current="swiperCurrentIndex">
 				<swiper-item class="swiper-container" v-for="(img,index) in imgs" :key="index" :item-id="img" :data-year="index">
@@ -278,6 +278,11 @@
 			goAnswer(){
 				uni.navigateTo({
 					url:'/pages/index/answerPage'
+				})
+			},
+			goTopicDetails(){
+				uni.navigateTo({
+					url:'/pages/index/topicDetails'
 				})
 			}
 		}

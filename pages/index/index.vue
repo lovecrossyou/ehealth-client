@@ -118,7 +118,7 @@
 			</view>
 
 			<view class="ask-list">
-				<view class="ask-list-item">
+				<view class="ask-list-item" @click="goAnswer">
 					<view class="ask-list-item-title">如何看待养老机构改革？</view>
 					<view class="ask-list-item-footer">
 						<image src="../../static/icon_man.png" class="ask-list-item-footer-icon"></image>
@@ -127,7 +127,7 @@
 						</view>
 					</view>
 				</view>
-				<view class="ask-list-item">
+				<view class="ask-list-item" @click="goAnswer">
 					<view class="ask-list-item-title">北京的康养试运行是什么意思？</view>
 					<view class="ask-list-item-footer">
 						<image src="../../static/icon_man.png" class="ask-list-item-footer-icon"></image>
@@ -274,6 +274,11 @@
 						// this.animationData[key] = this.animation.export();
 					}
 				}
+			},
+			goAnswer(){
+				uni.navigateTo({
+					url:'/pages/index/answerPage'
+				})
 			}
 		}
 	}

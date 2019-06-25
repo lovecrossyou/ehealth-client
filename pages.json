@@ -66,6 +66,11 @@
 			"style": {
 				"navigationBarTitleText": "动态详情"
 			}
+		}, {
+			"path": "pages/index/answerPage",
+			"style": {
+				"navigationBarTitleText": "问答"
+			}
 		}
 	],
 	"tabBar": {

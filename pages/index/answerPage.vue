@@ -32,15 +32,15 @@
 						<view class="attention_btn" v-if="item.isAttention" @click="giveAttention(index)">+ 关注</view>
 						<view class="attention_btn" v-else @click="giveAttention(index)">✓已关注</view>
 					</view>
-					<view class="publish_text">营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。</view>
-					<view class="publish_image">
+					<view class="publish_text" @click="goAnswerDetails">{{item.publishText}}</view>
+					<view class="publish_image" @click="goAnswerDetails">
 						<image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2780919478,3307421278&fm=26&gp=0.jpg" mode="aspectFill"></image>
 						<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2103092801,962345008&fm=26&gp=0.jpg" mode="aspectFill"></image>
 						<image src="http://img4.imgtn.bdimg.com/it/u=1509860559,1769982067&fm=26&gp=0.jpg" mode="aspectFill"></image>
 					</view>
 					<!-- 评论 & 点赞 -->
 					<view class="comment_like_area">
-						<view class="bottom_operation">
+						<view class="bottom_operation" @click="goAnswerDetails">
 							<view class="operation_icon">
 								<image src="http://qnimage.xiteng.com/btn_comment@2x.png" mode="aspectFill" style="width: 31upx;height: 28upx;"></image>
 							</view>
@@ -88,6 +88,11 @@ export default {
 	methods: {
 		giveAttention(index) {
 			this.answerQuestionList[index].isAttention = !this.answerQuestionList[index].isAttention;
+		},
+		goAnswerDetails(){
+			uni.navigateTo({
+				url:'/pages/index/answerDetails'
+			})
 		}
 	}
 };

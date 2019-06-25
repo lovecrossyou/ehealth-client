@@ -71,6 +71,11 @@
 			"style": {
 				"navigationBarTitleText": "问答"
 			}
+		}, {
+			"path": "pages/index/answerDetails",
+			"style": {
+				"navigationBarTitleText": "问答详情"
+			}
 		}
 	],
 	"tabBar": {

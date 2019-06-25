@@ -22,7 +22,7 @@
 <style>
 	.item-wrapper {
 		width: 170upx;
-		height: 230upx;
+		height: 245upx;
 
 		display: flex;
 		flex-direction: column;

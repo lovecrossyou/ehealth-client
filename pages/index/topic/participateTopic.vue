@@ -44,7 +44,7 @@ export default {
 }
 .topic_title_text {
 	width: 100%;
-	height: 44upx;
+	/* height: 44upx; */
 	color: #5871fe;
 	font-size: 22upx;
 	margin-top: 30upx;

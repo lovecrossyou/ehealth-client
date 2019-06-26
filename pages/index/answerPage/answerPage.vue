@@ -91,7 +91,7 @@ export default {
 		},
 		goAnswerDetails(){
 			uni.navigateTo({
-				url:'/pages/index/answerDetails'
+				url:'/pages/index/answerPage/answerDetails'
 			})
 		}
 	}

@@ -67,17 +67,17 @@
 				"navigationBarTitleText": "动态详情"
 			}
 		}, {
-			"path": "pages/index/answerPage",
+			"path": "pages/index/answerPage/answerPage",
 			"style": {
 				"navigationBarTitleText": "问答"
 			}
 		}, {
-			"path": "pages/index/answerDetails",
+			"path": "pages/index/answerPage/answerDetails",
 			"style": {
 				"navigationBarTitleText": "问答详情"
 			}
 		}, {
-			"path": "pages/index/topicDetails",
+			"path": "pages/index/topic/topicDetails",
 			"style": {
 				"navigationBarTitleText": "话题",
 				"navigationStyle": "custom",
@@ -88,9 +88,14 @@
 				}
 			}
 		}, {
-			"path": "pages/index/participateTopic",
+			"path": "pages/index/topic/participateTopic",
 			"style": {
 				"navigationBarTitleText": "参与话题"
+			}
+		}, {
+			"path": "pages/index/industryNews/industryNews",
+			"style": {
+				"navigationBarTitleText": "产业新闻"
 			}
 		}
 	],

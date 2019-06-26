@@ -36,8 +36,8 @@ export default {
 		return {
 			indicatorDots: false,
 			autoplay: false,
-			previousMargin: uni.upx2px(82) + 'px',
-			nextMargin: uni.upx2px(82) + 'px',
+			previousMargin: uni.upx2px(0) + 'px',
+			nextMargin: uni.upx2px(45) + 'px',
 			circular: true,
 			zoomParam: 1.0,
 			swiperCurrentIndex: 0,
@@ -106,7 +106,7 @@ export default {
 .swiper-tall {
 	display: flex;
 	align-items: center;
-	height: 280upx;
+	height: 320upx;
 	background-color: #ffffff;
 }
 .swiper-container {
@@ -117,16 +117,16 @@ export default {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	margin-left: 15upx;
-	margin-right: 15upx;
-	height: 280upx;
+	margin-left: 13upx;
+	margin-right: 13upx;
+	height: 320upx;
 	width: 671upx;
 	text-align: center;
 	border-radius: 13upx;
 	position: relative;
 	background-size: 100%;
 	background: url('http://img4.imgtn.bdimg.com/it/u=3438082709,2176902417&fm=11&gp=0.jpg') no-repeat center center;
-	background-size: 100% 280upx;
+	background-size: 100% 320upx;
 }
 .basic_content{
 	color: #fff;

@@ -42,7 +42,7 @@ export default {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding: 36upx 75upx 25upx 75upx;
+	padding: 30upx 75upx 25upx 75upx;
 	box-sizing: border-box;
 	background-color: #fff;
 }

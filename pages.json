@@ -87,6 +87,11 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/index/participateTopic",
+			"style": {
+				"navigationBarTitleText": "参与话题"
+			}
 		}
 	],
 	"tabBar": {

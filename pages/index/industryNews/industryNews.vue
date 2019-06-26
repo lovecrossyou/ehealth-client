@@ -60,7 +60,7 @@ export default {
 	margin-bottom: 38upx;
 }
 .search_area {
-	width: 100%;
+	width: 95%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -68,6 +68,8 @@ export default {
 	height: 60upx;
 	padding: 0 31upx;
 	box-sizing: border-box;
+	border-radius:10upx;
+	margin: 0 auto;
 }
 .search_icon {
 	width: 31upx;

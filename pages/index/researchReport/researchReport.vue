@@ -7,42 +7,41 @@
 				<input type="text" value="" placeholder="搜索资讯" class="search_input" />
 			</view>
 		</view>
-		<!-- tab导航 -->
-		<view class="nav_tab_wrapper">
-			<navTab @change="tabChange"></navTab>
-			<block v-if="TabCur === 0">
-				<view class="item-group"><tuijian></tuijian></view>
-			</block>
-			<block v-if="TabCur === 1"><view class="item-group">222</view></block>
-			<block v-if="TabCur === 2"><view class="item-group">333</view></block>
+		<!-- 筛选 -->
+		<view class="content">
+			<chooseLits :list="list" :arr="arr" @chooseLike="chooseLike"></chooseLits>
+			<rich-text :nodes="ddd"></rich-text>
 		</view>
 	</view>
 </template>
 
 <script>
-import navTab from '../components/navTab.vue';
-import tuijian from './tuijian.vue';
+import chooseLits from '@/components/chooseLits/chooseLits.vue';
 export default {
 	data() {
 		return {
-			TabCur: 0
+			list: ['来源', '行业', '类型', '时间'],
+			arr: [['综合排序', '价格降序', '价格升序'], ['类型不限', '高通过率', '利率低'], ['金额不限', '5k以下', '5k-10k', '10k以上']],
+			i2: [0, 0, 0],
+			ddd: '在飞云之下，啊哈哈哈哈，这风好大，我还是想她。'
 		};
 	},
 	methods: {
-		tabChange(index) {
-			this.TabCur = index;
+		chooseLike(i1) {
+			if (this.i2[i1[0]] != i1[1]) {
+				this.i2[i1[0]] = i1[1];
+			}
 		}
 	},
-	components: {
-		navTab,
-		tuijian
-	}
+	components: { chooseLits }
 };
 </script>
 
 <style scoped>
 .wrapper {
 	width: 100%;
+	padding: 0 31upx;
+	box-sizing: border-box;
 }
 .search_wrapper {
 	width: 100%;
@@ -76,5 +75,14 @@ export default {
 	flex: 1;
 	height: 31upx;
 	background-color: #f5f4f4;
+}
+.menu_wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.content{
+	
 }
 </style>

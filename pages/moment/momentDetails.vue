@@ -81,7 +81,7 @@ export default {
 			isLike:false,
 			"post_id": 2,
 			"uid": 1,
-			"username": "华为",
+			"companyName": "华为",
 			"header_image": "https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1894992214,3473101703&fm=58&s=9095187A4F45B20B49AA4BB70300C02D&bpow=121&bpoh=75",
 			"content": {
 				"text": "营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。",
@@ -123,11 +123,10 @@ export default {
 			posts: postData, //模拟数据
 			user_id: 4,
 			username: 'Liuxy',
-
 			index: '',
 			comment_index: '',
 
-			input_placeholder: '评论', //占位内容
+			input_placeholder: '分享你的想法~', //占位内容
 			focus: false, //是否自动聚焦输入框
 			is_reply: false, //回复还是评论
 			showInput: true, //评论输入框

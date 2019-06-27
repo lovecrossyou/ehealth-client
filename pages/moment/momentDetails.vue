@@ -130,7 +130,7 @@ export default {
 			input_placeholder: '评论', //占位内容
 			focus: false, //是否自动聚焦输入框
 			is_reply: false, //回复还是评论
-			showInput: false, //评论输入框
+			showInput: true, //评论输入框
 
 			screenHeight: '', //屏幕高度(系统)
 			platform: '',

@@ -56,7 +56,7 @@ export default {
 				{
 					username: '宏强',
 					userHeaderImg: 'http://img1.imgtn.bdimg.com/it/u=2532900942,931844899&fm=26&gp=0.jpg',
-					userCompany: '龙源起航技术有钱公司',
+					userCompany: '龙源起航技术有限公司',
 					topicTitle: '#北京西城区自行出台康养养老规范，能否作为典范进行实行？',
 					publishContent: '营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。'
 				},

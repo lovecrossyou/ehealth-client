@@ -69,7 +69,7 @@
 		<view><image src="http://qnimage.xiteng.com/4@2x.png" class="advertise"></image></view>
 
 		<!-- 研究报告 -->
-		<view class="report-items-wrapper">
+		<view class="report-items-wrapper" @click="goResearchReport">
 			<naviTitle title="研究报告"></naviTitle>
 
 			<scroll-view scroll-x="true" class="scroll-view_H" style="width: 100%" scroll-with-animation>
@@ -253,6 +253,11 @@ export default {
 		goIndustryNews() {
 			uni.navigateTo({
 				url: '/pages/index/industryNews/industryNews'
+			});
+		},
+		goResearchReport() {
+			uni.navigateTo({
+				url: '/pages/index/researchReport/researchReport'
 			});
 		}
 	}

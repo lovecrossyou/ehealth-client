@@ -102,6 +102,11 @@
 			"style": {
 				"navigationBarTitleText": "新闻详情"
 			}
+		}, {
+			"path": "pages/index/researchReport/researchReport",
+			"style": {
+				"navigationBarTitleText": "研究报告"
+			}
 		}
 	],
 	"tabBar": {

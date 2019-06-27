@@ -20,7 +20,7 @@
 		<!-- 来自你的产业朋友 -->
 		<view class="from_industry margin_top">
 			<view class="top_title">来自你的产业朋友</view>
-			<view class="publisher_info">
+			<view class="publisher_info"  @click="goCompanyDetails">
 				<image src="http://img2.imgtn.bdimg.com/it/u=1961142815,2698003411&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">牛牧</view>
@@ -28,7 +28,7 @@
 				</view>
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_text">
+			<view class="publish_text" @click="goMomentDetails">
 				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
@@ -37,7 +37,7 @@
 		<!-- 来自你的投资人朋友 -->
 		<view class="from_industry">
 			<view class="top_title">来自你的投资人朋友</view>
-			<view class="publisher_info">
+			<view class="publisher_info" @click="goCompanyDetails">
 				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1194115311,3137518246&fm=11&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">任正非</view>
@@ -46,7 +46,7 @@
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
 			<!-- 文字展开隐藏 -->
-			<view class="publish_text">
+			<view class="publish_text"  @click="goMomentDetails">
 				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
 			</view>
 			<view class="publish_image">
@@ -99,7 +99,7 @@
 				<view class="publisher_presentation" @click="goCompanyDetails"><view class="publisher_name">华为</view></view>
 				<view class="attention_btn">+ 关 注</view>
 			</view>
-			<view class="publish_text">
+			<view class="publish_text"  @click="goCompanyDetails">
 				凭借强大的研发实力和优秀的产品体验，过去一年华为手机已经完成了2亿部的出货目标，余承东此前曾表示，2019年华为手机的出货目标为2.5亿部，2020年要达到3亿部。而今年华为消费者业务也有望首次超越运营商、成为华为第一大核心业务。
 			</view>
 			<view class="publish_image">
@@ -117,7 +117,7 @@
 				</view>
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_text">
+			<view class="publish_text"  @click="goCompanyDetails">
 				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
 			</view>
 			<view class="publish_image">
@@ -184,6 +184,11 @@ export default {
 		goCompanyDetails() {
 			uni.navigateTo({
 				url: '../companyDetails/companyDetails'
+			});
+		},
+		goMomentDetails() {
+			uni.navigateTo({
+				url: '/pages/moment/momentDetails'
 			});
 		}
 	}

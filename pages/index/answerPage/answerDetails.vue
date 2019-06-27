@@ -233,7 +233,7 @@ export default {
 	font-size: 24upx;
 	margin-top: 40upx;
 }
-comment_user_img {
+.comment_user_img {
 	width: 60upx;
 	height: 60upx;
 	border-radius: 5upx;
@@ -287,11 +287,6 @@ comment_user_img {
 	margin-top: 30upx;
 	color: #333333;
 	font-size: 28upx;
-}
-.comment_user_img {
-	width: 60upx;
-	height: 60upx;
-	border-radius: 5upx;
 }
 .comment_list {
 	width: 100%;

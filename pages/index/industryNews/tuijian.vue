@@ -20,7 +20,7 @@
 		<!-- 新闻列表-->
 		<view class="industry-news">
 			<block v-for="(item,index) in newsList" :key="index">
-				<view class="news-item">
+				<view class="news-item" @click="goNewsDetails">
 					<view class="news-item-title">{{item.newsTitle}}</view>
 					<image :src="item.newsImg" class="news-item-logo" mode="aspectFill"></image>
 					<view class="news-item-time">{{item.newsTime}}</view>
@@ -89,6 +89,11 @@ export default {
 					// this.animationData[key] = this.animation.export();
 				}
 			}
+		},
+		goNewsDetails(){
+			uni.navigateTo({
+				url:'/pages/index/industryNews/industryNewsDetails'
+			})
 		}
 	}
 };

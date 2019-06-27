@@ -97,6 +97,11 @@
 			"style": {
 				"navigationBarTitleText": "产业新闻"
 			}
+		}, {
+			"path": "pages/index/industryNews/industryNewsDetails",
+			"style": {
+				"navigationBarTitleText": "新闻详情"
+			}
 		}
 	],
 	"tabBar": {

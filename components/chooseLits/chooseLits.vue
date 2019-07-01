@@ -4,8 +4,8 @@
 			<block v-for="(item,i) in newlist" :key="i">
 				<view class="ibox" @tap="alertnum(i)" :class="[i== i1?'actives':'']">
 					<text class="uni_14">{{item}}</text>
-					<image v-if="i != i1" class="ii" src="/static/choose-Cade/choose-Cadex.png" mode=""></image>
-					<image v-else class="ii" src="/static/choose-Cade/choose-Cades.png" mode=""></image>
+					<image v-if="i != i1" class="ii" src="http://qnimage.xiteng.com/icon_more_d@2x.png" mode=""></image>
+					<image v-else class="ii" src="http://qnimage.xiteng.com/icon_more_shang@2x.png" mode=""></image>
 				</view>
 			</block>
 		</view>
@@ -72,17 +72,22 @@
 	}
 
 	.mli {
-		/* border: 1upx solid red; */
+		width: 100%;
 		display: flex;
+		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		padding: 22upx 0;
+		padding: 25upx 50upx;
+		box-sizing: border-box;
+		background-color: #fff;
+		border-bottom: 1upx solid #E3E3E3;
 	}
 
 	.lione {
 		background-color: #fff;
+		margin-top: 70upx;
 		/* height: 262upx; */
-		padding: 10upx 40upx;
+		/* padding: 10upx 40upx; */
 
 	}
 
@@ -106,10 +111,10 @@
 	}
 
 	.ii {
-		width: 30upx;
-		height: 30upx;
+		width: 16upx;
+		height: 16upx;
 		display: block;
-		margin-left: 12upx;
+		margin-left: 9upx;
 	}
 
 	.actives {
@@ -122,21 +127,27 @@
 	}
 
 	.top_kbox {
+		width:100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		background-color: #FFFFFF;
-		padding: 28upx 5%;
+		box-sizing: border-box;
 		position: fixed;
-		top: 88upx;
-		width: 90%;
+		top: 80upx;
+		padding: 30upx 50upx 0 50upx;
+		box-sizing: border-box;
 		z-index: 99;
 		/* #ifdef APP-PLUS */
 		top: 0;
 		/* #endif */
+		
 	}
 	.boxa{
-		padding-top: 84upx;
-		position: relative;
+		/* padding-top: 20upx; */
+	}
+	.uni_14{
+		color: #666666;
+		font-size: 28upx;
 	}
 </style>

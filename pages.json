@@ -107,6 +107,16 @@
 			"style": {
 				"navigationBarTitleText": "研究报告"
 			}
+		}, {
+			"path": "pages/index/researchReport/freeReportDetails",
+			"style": {
+				"navigationBarTitleText": "研报详情-免费"
+			}
+		}, {
+			"path": "pages/index/researchReport/vipReportDetails",
+			"style": {
+				"navigationBarTitleText": "研报详情-VIP"
+			}
 		}
 	],
 	"tabBar": {

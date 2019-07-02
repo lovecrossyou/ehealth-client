@@ -3,7 +3,7 @@
 		<view class="nav-title">企脉</view>
 
 		<view class="list">
-			<view class="friends">
+			<view class="friends" @click="goMyFriends">
 				<image src="http://qnimage.xiteng.com/icon_friends@2x.png" class="friend-icon"></image>
 				<view class="friend-title">65位好友</view>
 			</view>
@@ -98,7 +98,13 @@ export default {
 				'http://qnimage.xiteng.com/WechatIMG10.jpeg']
 		};
 	},
-	methods: {}
+	methods: {
+		goMyFriends(){
+			uni.navigateTo({
+				url:'/pages/business/myFriends'
+			})
+		}
+	}
 };
 </script>
 

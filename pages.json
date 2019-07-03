@@ -122,6 +122,11 @@
 			"style": {
 				"navigationBarTitleText": "我的好友"
 			}
+		}, {
+			"path": "pages/business/phoneSearch",
+			"style": {
+				"navigationBarTitleText": "搜索好友"
+			}
 		}
 	],
 	"tabBar": {

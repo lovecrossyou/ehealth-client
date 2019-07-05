@@ -7,7 +7,7 @@
 				<image src="http://qnimage.xiteng.com/icon_friends@2x.png" class="friend-icon"></image>
 				<view class="friend-title">65位好友</view>
 			</view>
-			<view class="qimai">
+			<view class="qimai" @click="searchCompaniesPulse">
 				<image src="http://qnimage.xiteng.com/icon_find@2x.png" class="friend-icon"></image>
 				<view class="friend-title">探索企脉</view>
 			</view>
@@ -102,6 +102,11 @@ export default {
 		goMyFriends(){
 			uni.navigateTo({
 				url:'/pages/business/myFriends'
+			})
+		},
+		searchCompaniesPulse(){
+			uni.navigateTo({
+				url:'/pages/business/searchCompaniesPulse'
 			})
 		}
 	}

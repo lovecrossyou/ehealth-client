@@ -127,6 +127,11 @@
 			"style": {
 				"navigationBarTitleText": "搜索好友"
 			}
+		}, {
+			"path": "pages/business/searchCompaniesPulse",
+			"style": {
+				"navigationBarTitleText": "搜索企脉"
+			}
 		}
 	],
 	"tabBar": {

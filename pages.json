@@ -132,6 +132,17 @@
 			"style": {
 				"navigationBarTitleText": "搜索企脉"
 			}
+		}, {
+			"path": "pages/personalHomePage/personalHomePage",
+			"style": {
+				"navigationBarTitleText": "个人主页",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
 		}
 	],
 	"tabBar": {

@@ -20,7 +20,7 @@
 		<!-- 来自你的产业朋友 -->
 		<view class="from_industry margin_top">
 			<view class="top_title">来自你的产业朋友</view>
-			<view class="publisher_info"  @click="goCompanyDetails">
+			<view class="publisher_info" @click="goPersonalHomePage">
 				<image src="http://img2.imgtn.bdimg.com/it/u=1961142815,2698003411&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">牛牧</view>
@@ -37,7 +37,7 @@
 		<!-- 来自你的投资人朋友 -->
 		<view class="from_industry">
 			<view class="top_title">来自你的投资人朋友</view>
-			<view class="publisher_info" @click="goCompanyDetails">
+			<view class="publisher_info" @click="goPersonalHomePage">
 				<image src="https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1194115311,3137518246&fm=11&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">任正非</view>
@@ -109,7 +109,7 @@
 			</view>
 			<!-- 点赞 & 转发 & 评论 -->
 			<Operation transpondNum="123" commentNum="22" likeNum="22"></Operation>
-			<view class="publisher_info">
+			<view class="publisher_info" @click="goPersonalHomePage">
 				<image src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=3035998294,2703805772&fm=26&gp=0.jpg" mode="aspectFill" class="publisher_header_img"></image>
 				<view class="publisher_presentation">
 					<view class="publisher_name">雷军</view>
@@ -117,7 +117,7 @@
 				</view>
 				<image src="http://qnimage.xiteng.com/icon_arrow_down@2x.png" class="hidden_arrows"></image>
 			</view>
-			<view class="publish_text"  @click="goCompanyDetails">
+			<view class="publish_text" @click="goMomentDetails">
 				营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。营养领域康养行业怎么发展？2019第四届中国医疗器械高峰论坛，聚焦医疗产业原材料与生产制造。
 			</view>
 			<view class="publish_image">
@@ -181,15 +181,20 @@ export default {
 		giveAttention(index) {
 			this.organizationList[index].isAttention = !this.organizationList[index].isAttention;
 		},
-		goCompanyDetails() {
+		goPersonalHomePage() {
 			uni.navigateTo({
-				url: '../companyDetails/companyDetails'
+				url: '../personalHomePage/personalHomePage'
 			});
 		},
 		goMomentDetails() {
 			uni.navigateTo({
 				url: '/pages/moment/momentDetails'
 			});
+		},
+		goCompanyDetails(){
+			uni.navigateTo({
+				url:'../companyDetails/companyDetails'
+			})
 		}
 	}
 };

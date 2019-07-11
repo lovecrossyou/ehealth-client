@@ -3,7 +3,7 @@
 		<!-- 头部 -->
 		<view class="position_fixed">
 			<view class="top_area">
-				<view class="dynamic_title">动态</view>
+				<view class="dynamic_title">广场</view>
 				<view class="right_publish">
 					<image src="http://qnimage.xiteng.com/btn_add@2x.png" class="publish_img"></image>
 					<view>发布</view>

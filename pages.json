@@ -3,30 +3,46 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "首页"
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/moment/moment",
 			"style": {
-				"navigationBarTitleText": "广场"
-				// "navigationStyle": "custom",
-				// "app-plus": {
-				// 	"titleNView": {
-				// 		"type": "transparent"
-				// 	}
-				// }
+				"navigationBarTitleText": "广场",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/business/business",
 			"style": {
-				"navigationBarTitleText": "人脉"
-				// "navigationBarTextStyle": "white"
+				"navigationBarTitleText": "人脉",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/learning/learning",
 			"style": {
-				"navigationBarTitleText": "学习"
-				// "navigationBarTextStyle": "white"
+				"navigationBarTitleText": "学习",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}, {
 			"path": "pages/mine/mine",
@@ -95,7 +111,7 @@
 		}, {
 			"path": "pages/index/industryNews/industryNews",
 			"style": {
-				"navigationBarTitleText": "产业新闻"
+				"navigationBarTitleText": "产业资讯"
 			}
 		}, {
 			"path": "pages/index/industryNews/industryNewsDetails",
@@ -163,7 +179,7 @@
 			},
 			{
 				"pagePath": "pages/business/business",
-				"text": "人脉",
+				"text": "企脉",
 				"iconPath": "static/tab/tab_connections.png",
 				"selectedIconPath": "static/tab/tab_connections_s.png"
 			},

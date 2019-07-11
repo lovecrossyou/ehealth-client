@@ -1,7 +1,16 @@
 <template>
 	<view class="container">
+		<view class="top_area">
+			<view class="dynamic_title">首页</view>
+			<view class="right_publish">
+				<image src="http://qnimage.xiteng.com/icon_search@2x.png" class="publish_img"></image>
+			</view>
+		</view>
 		<!-- 讨论列表 -->
 		<view class="main" @click="goTopicDetails">
+			<view class="industry-index">
+			<naviTitle title="每日精选话题"></naviTitle>
+		</view>
 			<swiper class="swiper-tall" :indicator-dots="indicatorDots" :autoplay="autoplay" :previous-margin="previousMargin"
 			 :next-margin="nextMargin" :circular="circular" @change="change" :current="swiperCurrentIndex">
 				<swiper-item class="swiper-container" v-for="(img, index) in imgs" :key="index" :item-id="img" :data-year="index">
@@ -35,7 +44,7 @@
 
 		<!-- 产业新闻 -->
 		<view class="industry-news" @click="goIndustryNews">
-			<naviTitle title="产业新闻"></naviTitle>
+			<naviTitle title="产业资讯"></naviTitle>
 			<view class="news">
 				<view class="news-item">
 					<view class="news-item-title">乌丹星：分享了中国养老产业发展的 市场与战略思考。</view>
@@ -274,6 +283,35 @@
 		display: flex;
 		flex-direction: row;
 		align-items: center;
+	}
+
+	.top_area {
+		width: 100%;
+		height: 130upx;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 31upx;
+		box-sizing: border-box;
+		background-color: #fff;
+	}
+
+	.dynamic_title {
+		font-size: 60upx;
+		font-weight: bold;
+	}
+
+	.right_publish {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+	}
+
+	.publish_img {
+		width: 32upx;
+		height: 32upx;
+		margin-right: 8upx;
 	}
 
 	.ask-list-item {

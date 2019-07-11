@@ -83,7 +83,7 @@
 			</scroll-view>
 		</view>
 		<!-- 产业问答 -->
-		<view class="ask-wrapper">
+		<view class="ask-wrapper" @click="goAnswer">
 			<naviTitle title="产业问答"></naviTitle>
 			<view class="ask-tabs">
 				<view class="ask-tab-item-active">政策</view>
@@ -287,12 +287,12 @@
 
 	.top_area {
 		width: 100%;
-		height: 130upx;
+		/* height: 130upx; */
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 31upx;
+		padding: 80upx 31upx 20upx 31upx;
 		box-sizing: border-box;
 		background-color: #fff;
 	}
@@ -440,7 +440,7 @@
 	.scroll-view_H {
 		width: 750upx;
 		/* height: 240upx; */
-
+		margin-top: 15upx;
 		overflow: scroll;
 	}
 

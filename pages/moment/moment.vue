@@ -207,12 +207,12 @@ export default {
 }
 .top_area {
 	width: 100%;
-	height: 130upx;
+	/* height: 130upx; */
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 31upx;
+	padding: 80upx 31upx 10upx 31upx;
 	box-sizing: border-box;
 	background-color: #fff;
 }

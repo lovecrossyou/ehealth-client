@@ -190,10 +190,10 @@ export default {
 .nav-title {
 	font-size: 60upx;
 	font-family: PingFangSC-Medium;
-	font-weight: 500;
+	font-weight: bold;
 	color: rgba(51, 51, 51, 1);
-	line-height: 83upx;
-	padding: 0 31upx;
+	/* line-height: 83upx; */
+	padding: 61upx 31upx 11upx 31upx;
 	box-sizing: border-box;
 }
 .list {

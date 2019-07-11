@@ -25,7 +25,7 @@
 		}, {
 			"path": "pages/business/business",
 			"style": {
-				"navigationBarTitleText": "人脉",
+				"navigationBarTitleText": "企脉",
 				"navigationStyle": "custom",
 				"app-plus": {
 					"titleNView": {
@@ -39,9 +39,10 @@
 				"navigationBarTitleText": "学习",
 				"navigationStyle": "custom",
 				"app-plus": {
-					"titleNView": {
-						"type": "transparent"
-					}
+					"titleNView":false
+					// "titleNView": {
+					// 	"type": "transparent"
+					// }
 				}
 			}
 		}, {
@@ -185,7 +186,7 @@
 			},
 			{
 				"pagePath": "pages/learning/learning",
-				"text": "服务",
+				"text": "学习",
 				"iconPath": "static/tab/tab_study.png",
 				"selectedIconPath": "static/tab/tab_study_s.png"
 			},

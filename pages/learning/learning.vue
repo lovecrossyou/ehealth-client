@@ -35,7 +35,7 @@
 				}, {
 					name: '培训'
 				}, {
-					name: '咨询'
+					name: '项目咨询'
 				}],
 				TabCur: 0,
 			};
@@ -72,6 +72,7 @@
 	.main {
 		width: 100%;
 		overflow: hidden;
+		
 	}
 
 	div,

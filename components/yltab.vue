@@ -11,7 +11,7 @@
 		data() {
 			return {
 				selectIndex: 0,
-				items: ['行业交流', '培训', '咨询']
+				items: ['行业交流', '培训', '项目咨询']
 			};
 		},
 		methods: {
@@ -27,11 +27,14 @@
 <style>
 	.tab {
 		width: 100%;
-		height: 130upx;
+		height: 140upx;
 		display: flex;
 		flex-direction: row;
-		align-items: center;
+		align-items: flex-end;
 		background-color: #fff;
+		margin-top: 70upx;
+		/* padding-top: 70upx;
+		box-sizing: border-box; */
 	}
 
 	.item {

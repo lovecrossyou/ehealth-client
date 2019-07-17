@@ -1,17 +1,17 @@
 <template>
 	<div class="main">
 		<YLTab @change="tabChange"></YLTab>
-		<block v-if="TabCur===0">
+		<block v-if="TabCur===1">
 			<view class="item-group">
 				<JiaoLiu></JiaoLiu>
 			</view>
 		</block>
-		<block v-if="TabCur===1">
+		<block v-if="TabCur===2">
 			<view class="item-group">
 				<PeiXun></PeiXun>
 			</view>
 		</block>
-		<block v-if="TabCur===2">
+		<block v-if="TabCur===0">
 			<view class="item-group">
 				<ZiXun></ZiXun>
 			</view>

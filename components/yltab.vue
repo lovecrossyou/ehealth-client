@@ -11,7 +11,7 @@
 		data() {
 			return {
 				selectIndex: 0,
-				items: ['行业交流', '培训', '项目咨询']
+				items: [ '项目','交流', '培训']
 			};
 		},
 		methods: {

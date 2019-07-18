@@ -191,7 +191,7 @@
 			},
 			{
 				"pagePath": "pages/learning/learning",
-				"text": "学习",
+				"text": "项目",
 				"iconPath": "static/tab/tab_study.png",
 				"selectedIconPath": "static/tab/tab_study_s.png"
 			},

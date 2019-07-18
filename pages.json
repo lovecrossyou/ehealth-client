@@ -160,6 +160,11 @@
 					}
 				}
 			}
+		}, {
+			"path": "pages/learning/conferenceDetails",
+			"style": {
+				"navigationBarTitleText": "学习详情"
+			}
 		}
 	],
 	"tabBar": {

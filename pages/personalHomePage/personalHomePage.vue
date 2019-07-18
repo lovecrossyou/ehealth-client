@@ -79,7 +79,7 @@
 				<Operation transpondNum="555" commentNum="625" likeNum="85"></Operation>
 			</view>
 			<!-- 接受邀请按钮 -->
-			<button class="accept_btn">+加好友</button>
+			<view class="accept_btn_area"><button class="accept_btn">+加好友</button></view>
 		</view>
 	</view>
 </template>
@@ -289,6 +289,17 @@ export default {
 	color: #333;
 	font-size: 30upx;
 }
+.accept_btn_area {
+	width: 100%;
+	height: 126upx;
+	box-shadow: 0px 1upx 10upx 0px rgba(0, 0, 0, 0.08);
+	background: linear-gradient(0deg, #fff, #fff, rgba(255, 255, 255, 0.8));
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+}
 .accept_btn {
 	width: 690upx;
 	height: 80upx;
@@ -298,8 +309,5 @@ export default {
 	font-size: 36upx;
 	text-align: center;
 	line-height: 80upx;
-	position: fixed;
-	left: 31upx;
-	bottom: 50upx;
 }
 </style>

@@ -57,6 +57,24 @@
 				</view>
 				<view class="activity_details_img"></view>
 			</view>
+			<!-- 图片 -->
+			<view class="img_area">
+				<image src="http://img4.imgtn.bdimg.com/it/u=3476733313,3697516441&fm=11&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img3.imgtn.bdimg.com/it/u=486713944,1090227749&fm=26&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img3.imgtn.bdimg.com/it/u=1292940705,1456928370&fm=11&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img1.imgtn.bdimg.com/it/u=1186819112,1860185033&fm=11&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img2.imgtn.bdimg.com/it/u=996258327,1447372895&fm=11&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img1.imgtn.bdimg.com/it/u=3378325347,2845401044&fm=11&gp=0.jpg" mode="aspectFill"></image>
+				<image src="http://img1.imgtn.bdimg.com/it/u=2277690600,1432793827&fm=11&gp=0.jpg" mode="aspectFill"></image>
+			</view>
+		</view>
+		<!-- 立即报名 -->
+		<view class="immediately_apply_area">
+			<view class="left_collect_area">
+				<image src="http://qnimage.xiteng.com/btn_like_d@2x.png" class="collect_icon"></image>
+				<view class="collect_text">收藏</view>
+			</view>
+			<view class="immediately_apply_btn">立即报名</view>
 		</view>
 	</view>
 </template>
@@ -73,6 +91,7 @@ export default {
 <style scoped>
 .wrapper {
 	width: 100%;
+	background-color: #fff;
 }
 .top_banner_img {
 	width: 100%;
@@ -193,7 +212,7 @@ export default {
 }
 .activity_details {
 	width: 100%;
-	padding: 47rpx 33rpx;
+	padding: 47upx 33upx;
 	box-sizing: border-box;
 }
 .top_title {
@@ -205,15 +224,15 @@ export default {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	margin-top: 50rpx;
+	margin-top: 50upx;
 }
 .activity_progress_num {
 	width: 52upx;
 	height: 40upx;
-	border-top: 5rpx solid #cdb675;
-	border-right: 12rpx solid #cdb675;
-	border-bottom: 5rpx solid #cdb675;
-	border-left: 5rpx solid #cdb675;
+	border-top: 5upx solid #cdb675;
+	border-right: 12upx solid #cdb675;
+	border-bottom: 5upx solid #cdb675;
+	border-left: 5upx solid #cdb675;
 	color: #cdb675;
 	font-size: 28upx;
 	text-align: center;
@@ -228,12 +247,65 @@ export default {
 	font-size: 28upx;
 	font-weight: 500;
 	line-height: 45upx;
-	border-bottom: 2rpx solid #cdb675;
+	border-bottom: 2upx solid #cdb675;
 }
 .activity_details_content {
 	color: #333333;
 	font-size: 30upx;
 	margin-top: 25upx;
 	line-height: 50upx;
+}
+.img_area {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 28upx;
+	box-sizing: border-box;
+	margin-bottom: 130upx;
+}
+.img_area image {
+	width: 48.5%;
+	height: 220upx;
+	margin-bottom: 20upx;
+}
+.immediately_apply_area {
+	width: 100%;
+	height: 126upx;
+	box-shadow: 0px 1upx 10upx 0px rgba(0, 0, 0, 0.08);
+	background: linear-gradient(0deg, #fff, #fff, rgba(255, 255, 255, 0.8));
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 30upx 0 65upx;
+	box-sizing: border-box;
+}
+.collect_icon {
+	width: 40upx;
+	height: 40upx;
+}
+.left_collect_area {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.collect_text {
+	color: #333;
+	font-size: 24upx;
+}
+.immediately_apply_btn {
+	margin-left: 50upx;
+	flex: 1;
+	height: 80upx;
+	background: linear-gradient(-90deg, rgba(137, 176, 253, 1), rgba(88, 113, 254, 1));
+	border-radius: 40upx;
+	text-align: center;
+	line-height: 80upx;
+	color: #fff;
+	font-size: 36upx;
 }
 </style>

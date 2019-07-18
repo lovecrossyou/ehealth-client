@@ -156,13 +156,17 @@ export default {
 }
 .download_area {
 	width: 100%;
-	height: 140upx;
-	background-color: #fff;
-	padding: 30upx;
-	box-sizing: border-box;
+	height: 126upx;
+	box-shadow: 0px 1upx 10upx 0px rgba(0, 0, 0, 0.08);
+	background: linear-gradient(0deg, #fff, #fff, rgba(255, 255, 255, 0.8));
 	position: fixed;
-	left: 0;
 	bottom: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0 30upx 0 65upx;
+	box-sizing: border-box;
 }
 .download_btn {
 	width: 100%;

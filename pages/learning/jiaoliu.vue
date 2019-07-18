@@ -51,11 +51,11 @@
 
 <script>
 export default {
-	methods:{
-		goConferenceDetails(){
+	methods: {
+		goConferenceDetails() {
 			uni.navigateTo({
-				url:'/pages/learning/conferenceDetails'
-			})
+				url: '/pages/learning/conferenceDetails'
+			});
 		}
 	}
 };

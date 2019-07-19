@@ -39,7 +39,7 @@
 				"navigationBarTitleText": "学习",
 				"navigationStyle": "custom",
 				"app-plus": {
-					"titleNView":false
+					"titleNView": false
 					// "titleNView": {
 					// 	"type": "transparent"
 					// }
@@ -164,6 +164,17 @@
 			"path": "pages/learning/conferenceDetails",
 			"style": {
 				"navigationBarTitleText": "学习详情"
+			}
+		}, {
+			"path": "pages/learning/courseDetails",
+			"style": {
+				"navigationBarTitleText": "课程简介",
+				"navigationStyle": "custom",
+				"app-plus": {
+					"titleNView": {
+						"type": "transparent"
+					}
+				}
 			}
 		}
 	],
